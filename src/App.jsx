@@ -7,7 +7,7 @@ import RegistrationScreen from "./Components-Registration/RegistrationScreen";
 
 const router = createBrowserRouter([
 {
-  path: '/PRP',
+  path: '/PRP_Portal',
   element: <LandingPage/>,
 },
 {
