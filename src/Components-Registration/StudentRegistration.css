@@ -1,0 +1,285 @@
+
+ 
+.Stu-Reg-registration-form,
+.Stu-Reg-form-header,
+.Stu-Reg-login-footer-text {
+  width: 100%;
+  max-width: 520px;
+}
+ 
+.Stu-Reg-form-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+ 
+.Stu-Reg-user-icon-bg {
+  width: 34px;
+  height: 34px;
+  background-color: #f3efff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+ 
+.Stu-Reg-user-icon-bg img {
+  width: 38px;
+  height: 38px;
+}
+ 
+.Stu-Reg-form-header h2 {
+  font-size: 19px;
+  color: #111625;
+  font-weight: 700;
+  margin: 0;
+}
+ 
+.Stu-Reg-form-header p {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 2px 0 0 0;
+}
+ 
+.Stu-Reg-registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+.Stu-Reg-form-row.Stu-Reg-columns-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+ 
+.Stu-Reg-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+ 
+.Stu-Reg-form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+}
+ 
+.Stu-Reg-form-group input
+ {
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px solid #d2d6dc;
+  border-radius: 6px;
+  outline: none;
+  background-color: #ffffff;
+  color: #111827;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+ 
+.Stu-Reg-form-group input::placeholder,
+.Stu-Reg-form-select::placeholder {
+  color: #9fa6b2;
+}
+ 
+.Stu-Reg-form-group input:focus,
+.Stu-Reg-phone-input-wrapper:focus-within,
+.Stu-Reg-search-input-wrapper:focus-within,
+.Stu-Reg-form-select:focus {
+  border-color: #7c4dff;
+  box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.08);
+}
+ 
+.Stu-Reg-select-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+ 
+.Stu-Reg-form-select {
+  width: 100%;
+  height: 36px;
+  padding: 6px 36px 6px 12px;
+  font-size: 13px;
+  border: 1px solid #d2d6dc;
+  border-radius: 6px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #111827;
+  box-sizing: border-box;
+}
+ 
+.Stu-Reg-custom-dropdown-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  pointer-events: none;
+}
+ 
+.Stu-Reg-phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  width: 100%;
+  height: 36px;
+  /* border: 1px solid #d2d6dc; */
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+ 
+.Stu-Reg-select-country-container {
+  position: relative;
+  width: 60px;
+  height: 100%;
+  border-right: 1px solid #d2d6dc;
+  border-radius: 10px;
+}
+ 
+.Stu-Reg-country-dropdown {
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+}
+ 
+.Stu-Reg-phone-input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-size: 13px;
+  height: 100%;
+}
+ 
+.Stu-Reg-search-input-wrapper {
+  display: flex ;
+  align-items: center ;
+  width: 100% ;
+  height: 36px ;
+  border: 1px solid #d2d6dc;
+  border-radius: 6px ;
+  background-color: #ffffff ;
+  box-sizing: border-box ;
+  transition: all 0.2s ease ;
+}
+ 
+.Stu-Reg-search-input-wrapper input {
+  flex: 1 ;
+  border: none ;
+  outline: none ;
+  box-shadow: none ;
+  padding: 0 12px ;
+  font-size: 13px ;
+  height: 100% ;
+  background: transparent ;
+}
+ 
+.Stu-Reg-search-input-wrapper:focus-within {
+  border-color: #7c4dff ;
+  box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.08) ;
+}
+ 
+.Stu-Reg-search-field-icon {
+  width: 14px ;
+  height: 14px ;
+  margin-left: 12px ;
+}
+ 
+.Stu-Reg-password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+ 
+.Stu-Reg-password-input-wrapper input {
+  padding-right: 40px ;
+}
+ 
+.Stu-Reg-password-eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 12px;
+  cursor: pointer;
+}
+ 
+.Stu-Reg-terms-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+ 
+.Stu-Reg-terms-checkbox-container input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: #7c4dff;
+}
+ 
+.Stu-Reg-terms-checkbox-container label {
+  font-size: 12px;
+  color: #4b5563;
+}
+ 
+/* .Stu-Reg-terms-checkbox-container a,
+.Stu-Reg-login-footer-text a {
+  color: #7c4dff;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+} */
+ 
+.Stu-Reg-terms-checkbox-container a:hover,
+.Stu-Reg-login-footer-text a:hover {
+  text-decoration: underline;
+}
+ 
+.Stu-Reg-complete-reg-btn {
+  background-color: #7c4dff;
+  color: white;
+  border: none;
+  width: 100%;
+  height: 38px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  box-shadow: 0 2px 6px rgba(124, 77, 255, 0.15);
+  transition: all 0.2s ease;
+}
+ 
+.Stu-Reg-complete-reg-btn:hover {
+  background-color: #6536ec;
+}
+ 
+.Stu-Reg-btn-arrow {
+  width: 12px;
+  height: 12px;
+}
+ 
+.Stu-Reg-login-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: #4b5563;
+  margin-top: 12px;
+}
