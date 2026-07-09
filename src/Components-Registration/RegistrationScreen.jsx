@@ -7,7 +7,7 @@ import StudentIcon from '../assets/RegistrationAssets/StudentReg.png'
 import TCIcon from '../assets/RegistrationAssets/TrainingCoordinatorReg.png'
 import Help from '../assets/RegistrationAssets/Help.png'
 import Register from '../assets/RegistrationAssets/Register.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import TraningCoordinatorReg from './TraningCoordinatorReg'
 import StudentRegistration from './StudentRegistration'
 import RecruiterRegistration from './RecruiterRegistration'
@@ -17,6 +17,7 @@ import CollabrationIcon from '../assets/RegistrationAssets/Collabration.png'
 import Oppertunities from '../assets/RegistrationAssets/OppoeruniesIcon.png'
 import RoleBased from '../assets/RegistrationAssets/RoleBasedAccess.png'
 import TimeTracking from '../assets/RegistrationAssets/R-timetracking-Icon.png'
+import Back from "../assets/LoginAssets/BackIcon.png";
 
 const RegistrationScreen = () => {
     const Users = [
@@ -41,6 +42,7 @@ const RegistrationScreen = () => {
             Desc: "Manage training programs, batches, schedules and training records.",
         }
     ]
+    const navigate= useNavigate();
 
     const [selectedRole, SetselectedRole] = useState(null)
 
@@ -85,7 +87,11 @@ const RegistrationScreen = () => {
 
 
                         </div>
+                        <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                    <button onClick={()=>navigate('/PRP_Portal')} style={{padding:"10px",width:"fit-content",background:"#8D61D7",color:"#fff",border:"none",borderRadius:"6px"}}> <img src={Back} alt="back Icon" width={10} /> Return to Home</button>
                     </div>
+                    </div>
+                    
                     <div style={{ display: "flex", gap: "5px", margin: "10px", alignItems: "center", padding: "0px 20px" }}>
                         <img src={Help} alt="help" width={20} />
                         <Link style={{ margin: "0", fontSize: "12px", textDecoration: "none", color: "black" }}>Need help? Contact support@campusconnect.com</Link>

@@ -1,0 +1,191 @@
+.Common-Login-Container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(160deg, #5B3FA1 , #8D61D7);
+    min-height: 100vh;
+}
+
+
+.Common-Login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 10px 70px;
+    /* background-color: rgba(91, 63, 161, 0.7); */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+    z-index: 9999;
+}
+
+.UserRegistration-Logo-Title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.Common-Login-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Common-Login-support-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.Common-Login-support-link:hover {
+    opacity: 0.8;
+}
+
+.Common-Login-help-center-button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.Common-Login-help-center-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Common-Login-Row1 {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 10px; */
+    width: 100%;
+    max-width: 1000px;
+    margin-inline: auto;
+    box-sizing: border-box;
+    /* align-content: center; */
+}
+
+.Common-Login-User-Cont {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.03);
+    color: #fff;
+    padding: 30px 40px;
+    /* box-sizing: border-box; */
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: space-evenly;
+}
+
+.Common-Login-User-Cont:hover {
+    transform: translateY(-4px);
+    /* background: linear-gradient(to top, rgba(87, 14, 85, 0.4), rgba(141, 97, 215, 0.4)); */
+    background: linear-gradient(to top, #5B3FA1 , #8D61D7);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.Common-Login-User-Cont .arrow-img {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.Common-Login-User-Cont:hover .arrow-img {
+    animation: arrowSlide 0.8s infinite alternate ease-in-out;
+}
+@keyframes arrowSlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(8px);
+    }
+}
+.Common-Login-User-Cont h4 {
+margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    
+}
+
+.Common-Login-User-Cont p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffffea;
+    font-weight: 600;
+    line-height: 1.4;
+    max-width: 300px;
+}
+
+.Common-Login-custom-footer {
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.Common-Login-footer-copyright {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.Common-Login-footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.Common-Login-footer-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.Common-Login-footer-link:hover {
+    color: #ffffff;
+}
+
+
+@media (min-width: 600px) {
+    .Common-Login-Row1 {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .Common-Login-header {
+        padding: 15px 20px;
+    }
+     .Common-Login-Row1 {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 40px 50px;
+        gap: 5px;
+    }
+    .UserRegistration-Title p {
+        display: none; 
+    }
+
+    .Common-Login-custom-footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .Common-Login-footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
