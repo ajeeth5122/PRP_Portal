@@ -4,17 +4,21 @@
     background: linear-gradient(160deg, #5B3FA1 , #8D61D7);
     min-height: 100vh;
 }
+.Common-Login-Title-Cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 75px;
+}
 
 
 .Common-Login-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
     padding: 10px 70px;
     /* background-color: rgba(91, 63, 161, 0.7); */
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 9999;
 }
 
@@ -165,7 +169,9 @@ margin: 0;
 
 @media (max-width: 640px) {
     .Common-Login-header {
+        flex-direction: column;
         padding: 15px 20px;
+        justify-content: center;
     }
      .Common-Login-Row1 {
         grid-template-columns: repeat(1, 1fr);

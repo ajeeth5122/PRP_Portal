@@ -46,7 +46,9 @@ const Footer = () => {
       </div>
       <div className="LandingPage-footer-divider"></div>
       <div className="LandingPage-footer-bottom">
+        <div>
         <p>&#169; 2026 EduHire. Empowering professional futures across the globe.</p>
+        </div>
         <div className="LandingPage-footer-links">
           <Link to="">Status</Link>
           <Link to="">Sitemap</Link>

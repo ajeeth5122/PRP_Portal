@@ -17,14 +17,14 @@
 .LandingPage-header-btns {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
 }
 
 .LandingPage-btn-login {
-  background: #8037B0;
+  background: #fff;
   border: none;
   /* color: #8037B0; */
-  color: #fff;
+  color: #8037B0;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -33,7 +33,7 @@
 }
 
 .LandingPage-btn-get-started {
-  background-color: #7011e4;
+  background-color: #8037B0;
   color: #ffffff;
   border: none;
   padding: 10px 24px;

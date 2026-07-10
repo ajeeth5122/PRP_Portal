@@ -135,7 +135,6 @@
 
 .LandingPage-footer-bottom {
   max-width: 1300px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -193,6 +192,7 @@
     flex-direction: column; 
     align-items: flex-start;
     gap: 0px; 
+   
   }
 
   .LandingPage-footer-text {

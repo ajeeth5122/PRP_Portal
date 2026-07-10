@@ -26,14 +26,14 @@ const CommonLoginScreen = () => {
                         <button className="Common-Login-help-center-button">Help Center</button>
                     </div>
                 </div>
-                <div style={{padding: "10px 75px",display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}}>
+                <div className='Common-Login-Title-Cont'>
                 <div onClick={()=>navigate('/PRP_Portal')} style={{display:"flex" ,padding:"5px 10px",borderRadius:"6px",outline:"none",border:"none",background:"white",gap:"5px"}}>
                     <img src={Back} alt="back btn" width={20} />
                 </div>
                 <p style={{ textAlign: 'center',flex:"1", fontWeight: "700", color: "#ffffff9e", fontSize: "14px",margin:"20px 0" }}>SELECT YOUR ROLE TO LOGIN</p>
                 </div>
                 <div className='Common-Login-Row1'>
-                    <div  className='Common-Login-User-Cont'>
+                    <div onClick={()=>navigate('/PRP_Portal/Login/Student')}  className='Common-Login-User-Cont'>
                         <img src={StudentIcon} alt="Student Icon" width={70} />
                         <div>
                             <h4>Student</h4>
@@ -42,7 +42,7 @@ const CommonLoginScreen = () => {
                         </div>
                         
                     </div>
-                    <div className='Common-Login-User-Cont'>
+                    <div onClick={()=>navigate('/PRP_Portal/Login/Recruiter')} className='Common-Login-User-Cont'>
                         <img src={RecruiterIcon} alt="Recruiter Icon" width={70} />
                         <div>
                             <h4>Recruiter</h4>
@@ -50,7 +50,7 @@ const CommonLoginScreen = () => {
                             <img className="arrow-img" src={RightArrowImg} alt="RightArrowIcon" width={15} />
                         </div>
                     </div>
-                    <div className='Common-Login-User-Cont'>
+                    <div onClick={()=>navigate('/PRP_Portal/Login/PlacementOfficer')} className='Common-Login-User-Cont'>
                         <img src={POIcon} alt="Placement Officer Icon" width={70} />
                         <div>
                             <h4>Placement Officer</h4>
@@ -58,7 +58,7 @@ const CommonLoginScreen = () => {
                             <img className="arrow-img" src={RightArrowImg} alt="RightArrowIcon" width={15} />
                         </div>
                     </div>
-                    <div className='Common-Login-User-Cont'>
+                    <div onClick={()=>navigate('/PRP_Portal/Login/TrainingCoordinator')} className='Common-Login-User-Cont'>
                         <img src={TCIcon} alt="Training Coordinator Icon" width={70} />
                         <div>
                             <h4>Training Coordinator</h4>

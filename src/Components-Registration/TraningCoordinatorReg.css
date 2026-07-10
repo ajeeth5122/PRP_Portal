@@ -140,9 +140,9 @@
   gap: 8px;
 }
 
-/* .TC-Reg-btn:hover {
+.TC-Reg-btn:hover {
   background-color: #7445f8;
-} */
+}
 
 .TC-Reg-login-redirect {
   text-align: center;

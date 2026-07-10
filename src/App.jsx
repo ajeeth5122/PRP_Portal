@@ -5,6 +5,10 @@ import LandingPage from "./LandingPage";
 import RegistrationScreen from "./Components-Registration/RegistrationScreen";
 import CommonLoginScreen from "./Components-Login/CommonLoginScreen";
 import StudentLogin from "./Components-Login/StudentLogin";
+import RecruiterLogin from "./Components-Login/RecruiterLogin";
+import TrainingCoordinatorLogin from "./Components-Login/TrainingCoordinatorLogin";
+import PlacementOfficerLogin from "./Components-Login/PlacementOfficerLogin";
+import ForgotPassword from "./Components-Login/ForgotPassword";
 
 
 const router = createBrowserRouter([
@@ -23,6 +27,22 @@ const router = createBrowserRouter([
 {
   path:'/PRP_Portal/Login/Student',
   element:<StudentLogin/>
+},
+{
+  path:'/PRP_Portal/Login/PlacementOfficer',
+  element:<PlacementOfficerLogin/>
+},
+{
+  path:'/PRP_Portal/Login/Recruiter',
+  element:<RecruiterLogin/>
+},
+{
+  path:'/PRP_Portal/Login/TrainingCoordinator',
+  element:<TrainingCoordinatorLogin/>
+},
+{
+  path:'/PRP_Portal/Login/Forgotpassword',
+  element:<ForgotPassword/>
 },
 
 
