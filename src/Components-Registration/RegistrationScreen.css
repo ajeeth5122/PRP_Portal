@@ -1,11 +1,9 @@
 .UserRegistration-Container{
     display: flex;
-    /* gap: 15px; */
     background-color: #F5F1FD;
 }
 .UserRegistration-Sidebar{
     background-color: #7c4dff5a;
-    /* background: linear-gradient(to Left, rgba(60, 159, 170, 0.696),rgb(55, 241, 197) ); */
     display: flex;
     flex-direction: column;
     max-width: 550px;
@@ -15,7 +13,7 @@
     top: 0;
 }
 .UserRegistration-select-Cont{
-    padding: 20px 20px;
+    padding: 20px;
 }
 .UserRegistration-Logo-Title{
     padding: 7px;
@@ -26,6 +24,7 @@
 .UserRegistration-Title h4{
     margin: 0;
     font-size: 18px;
+    color:#111827;
 }
 
 .UserRegistration-Title p{
@@ -65,10 +64,13 @@
     margin: 10px;
     border-radius: 10px;
     box-shadow: 1px 1px 1px 1px #E5E7EB ;
+    border: 1px solid transparent;
     /* background-color: #fff; */
     background-color: #F5F1FD;
     max-width: 459px;
     cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 
 .Userreg-Nav-items.Active{
@@ -85,6 +87,7 @@
     box-shadow: 1px -1px 6px 0.3px #8D61D7 ;
     border: 1px solid whitesmoke;
     max-width: 459px;
+    box-sizing: border-box;
 }
 
 .Userreg-Nav-items:hover{
@@ -92,7 +95,6 @@
     background-color: #8c61d76c;
     border: 1px solid rgba(0, 0, 0, 0.152);
     color: whitesmoke;
-    /* box-shadow: 1px -1px 5px 2px #8D61D7; */
     box-shadow: none;
 }
 .Userreg-Nav-List{
@@ -188,5 +190,89 @@
  color: #4A4455;
  font-weight: 400;
  line-height: 20px;
+}
+
+@media (max-width: 1024px) {
+    .UserRegistration-Container {
+        height: 100vh;
+        overflow: hidden; 
+    }
+
+    .UserRegistration-Sidebar {
+        max-width: 350px;
+        min-width: 350px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+    .UserRegistration-Navbar{
+        margin-top: 0;
+    }
+    .UserRegistration-select-Cont {
+        padding: 12px;
+    }
+
+    .UserRegistration-Create-Title h2 {
+        font-size: 20px; 
+    }
+
+    .UserRegistration-Create-Title p {
+        font-size: 12px;
+    }
+
+    .Userreg-Nav-items, 
+    .Userreg-Nav-items.Active {
+        max-width: 100%;
+        padding: 10px 8px;
+        margin: 8px 0;
+    }
+
+    .Userreg-Nav {
+        gap: 8px;
+    }
+
+    .UserReg-Role {
+        font-size: 13px;
+    }
+
+    .UserReg-Role-Desc {
+        font-size: 11px;
+    }
+
+    .UserRegistration-Mainsec {
+        height: 100vh;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .UserRegistration-Mainsec-Title h4 {
+        font-size: 24px;
+    }
+
+    .UserRegistration-Mainsec-Title p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .UserRegistration-Features {
+        gap: 12px 20px;
+        max-width: 440px;
+        margin-top: 15px;
+    }
+
+    .UserRegistration-Features-Items {
+        max-width: 180px;
+    }
+
+    .UserRegistration-Features-Items h5 {
+        font-size: 13px;
+    }
+
+    .UserRegistration-Features-Items p {
+        font-size: 11px;
+        line-height: 15px;
+    }
 }
 

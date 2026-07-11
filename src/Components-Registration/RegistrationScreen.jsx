@@ -78,7 +78,7 @@ const RegistrationScreen = () => {
                                         </div>
 
                                         <div>
-                                            <input type="radio" checked={selectedRole === user.title} onChange={(e) => setSelectedRole(e.target.value)} />
+                                            <input type="radio" checked={selectedRole === user.title} onChange={(e) => SetselectedRole(e.target.value)} />
                                         </div>
                                     </div>
 
@@ -93,8 +93,8 @@ const RegistrationScreen = () => {
                     </div>
                     
                     <div style={{ display: "flex", gap: "5px", margin: "10px", alignItems: "center", padding: "0px 20px" }}>
-                        <img src={Help} alt="help" width={20} />
-                        <Link style={{ margin: "0", fontSize: "12px", textDecoration: "none", color: "black" }}>Need help? Contact support@campusconnect.com</Link>
+                        <img src={Help} alt="help" width={10} />
+                        <Link style={{ margin: "0", fontSize: "10px", textDecoration: "none", color: "black" }}>Need help? Contact support@campusconnect.com</Link>
                     </div>
                 </div>
                 <div className='UserRegistration-Mainsec'>
