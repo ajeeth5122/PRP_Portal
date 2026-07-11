@@ -162,7 +162,7 @@
 }
 
 
-
+/* 
 @media screen and (max-width: 1024px) {
   .LandingPage-footer {
     padding: 60px 40px 25px;
@@ -238,5 +238,53 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 20px;
+  }
+} */
+
+@media screen and (max-width: 1024px) {
+  .LandingPage-footer {
+    padding: 60px 40px 25px;
+  }
+
+  .LandingPage-footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr; 
+    gap: 20px;
+    width: 100%;
+  }
+
+  .LandingPage-footer-text {
+    width: 100%; 
+  }
+
+  .LandingPage-footer-logo {
+    margin-top: 0px; 
+    margin-bottom: 20px;
+  }
+
+  .LandingPage-footer-description {
+    width: 100%; 
+  }
+
+  .LandingPage-footer-navs {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .LandingPage-footer-navs h4 {
+    margin-top: 0px; 
+    margin-bottom: 20px;
+  }
+
+  .LandingPage-newsletter-text {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .LandingPage-footer-container {
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px 20px;
   }
 }

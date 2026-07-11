@@ -85,8 +85,17 @@ text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   background-color: #CB80FC;
 }
-.LandingPage-profiles-img +.LandingPage-profiles-img {
+.LandingPage-profiles-img +.LandingPage-profiles-img-secondary {
   margin-left: -15px; 
+}
+.LandingPage-profiles-img-secondary {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  background-color: #caa7e2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .LandingPage-profile-text {
@@ -396,13 +405,14 @@ width: 100%;
   padding:40px;
   border:1px solid #9c9c9c45;
   border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .LandingPage-review-content{
   display:flex;
   gap:18px;
   margin-bottom:25px;
-  max-width: 454px ;
+  width: 100%;
 }
 
 .LandingPage-profile-image{
@@ -438,7 +448,7 @@ width: 100%;
   margin: 0;
   font-size: 18px;
   font-weight: 400;
-width: 454px;
+  width: 100%;
 
 }
 
@@ -508,7 +518,7 @@ width: 454px;
   }
 
   .LandingPage-features-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
   }
 
@@ -518,18 +528,62 @@ width: 454px;
   }
 
   .LandingPage-review-wrapper {
-    grid-template-columns: 1fr; 
-    gap: 30px;
+    grid-template-columns: 1fr 1fr; 
+    gap: 24px;
+    align-items: stretch;
   }
 
   .LandingPage-review-card {
     max-width: 100%;
     width: 100%;
+    padding: 24px;
   }
 
   .LandingPage-cta-container p {
     width: 80px; 
     width: 80%;
+  }
+  .LandingPage-review-content {
+    width: 100%;
+    gap: 12px;
+  }
+
+ 
+  .LandingPage-stars-image {
+    width: 100%;
+    max-width: 120px; 
+    height: auto;
+    object-fit: contain;
+  }
+
+  .LandingPage-review-user {
+    flex: 1;
+    min-width: 0; 
+  }
+
+  .LandingPage-review-user h4 {
+    font-size: 16px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .LandingPage-review-user p {
+    font-size: 11px;
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .LandingPage-quotes-image {
+    width: 60px; 
+    height: auto;
+  }
+
+  .LandingPage-review-text {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
   }
 }
 
@@ -618,6 +672,11 @@ width: 454px;
     padding: 30px 10px;
     gap: 30px;
     border-radius: 24px;
+  }
+   .LandingPage-review-wrapper {
+    grid-template-columns: 1fr; 
+    gap: 24px;
+    align-items: stretch;
   }
 
   .LandingPage-datas h2 {

@@ -144,7 +144,7 @@ const TrainingCoordinatorLogin = () => {
                             <button type="submit" className="TC-Reg-btn">Submit</button>
                         </div>
                         <div className='UserLogin-Links'>
-                            <Link className='UserLogin-ForgetPassword-Link' >Forget Password?</Link>
+                            <Link to={'/PRP_Portal/Login/Forgotpassword'} className='UserLogin-ForgetPassword-Link' >Forget Password?</Link>
                             <Link className='UserLogin-Request-Access-Link'>Request Access</Link>
                         </div>
                     </form>

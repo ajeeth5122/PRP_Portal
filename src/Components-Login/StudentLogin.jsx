@@ -96,12 +96,13 @@ const StudentLogin = () => {
                         <div className="UserLogin-Form-Header-Text">
                             <h4>Student Login</h4>
                             <p>Enter your credentials to access the portal.</p>
-                        </div>
-                        {error.loginError && (
-                            <div style={{ color: 'red', marginBottom: '15px', fontSize: '14px', textAlign: 'center' }}>
+                            {error.loginError && (
+                            <div style={{ display:"flex",justifyContent:"center",alignContent:"center", color: 'red', fontSize: '12px',textAlign:"center"}}>
                                 {error.loginError}
                             </div>
                         )}
+                        </div>
+                        
 
                         <div className='UserLogin-Form-Input-Group'>
                             <label htmlFor="UserId">University Email</label>

@@ -67,7 +67,7 @@ const MainSection = () => {
                         <p className="LandingPage-profile-text">Join 50k+ professionals hired this month</p>
                         <div className="LandingPage-profile">
                             <img src={Profiles} alt="Profile 1" className="LandingPage-profiles-img" />
-                            <img style={{ background: "#C7D3FF", paddingLeft: "-10px" }} src={Profiles} alt="Profile 2" width={50} className="LandingPage-profiles-img" />
+                            <img className="LandingPage-profiles-img-secondary" src={Profiles} alt="Profile 2" width={50} />
                             <div className="LandingPage-profiles-count">+5k</div>
                         </div>
 
