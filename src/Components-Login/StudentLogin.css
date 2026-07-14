@@ -51,8 +51,10 @@
     max-width: 448px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 1px 4px 12px 2px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 1px 4px 12px 2px rgba(0, 0, 0, 0.1); */
     border: 1px solid #ffffff30;
+    /* background-color:  #8c61d756; */
+
 }
 
 .UserLogin-Form-Box>img {
@@ -83,9 +85,15 @@
     color: #E5E7EB;
 }
 
-.UserLogin-Form-Input-Group input {
+.UserLogin-Form-Input {
     padding: 12px 10px;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+.UserLogin-Form-Input-Errors {
+    padding: 12px 10px;
+    border: 2px solid #fa2c2c8f;
     border-radius: 4px;
     outline: none;
 }

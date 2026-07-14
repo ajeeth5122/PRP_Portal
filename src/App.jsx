@@ -7,8 +7,8 @@ import CommonLoginScreen from "./Components-Login/CommonLoginScreen";
 import StudentLogin from "./Components-Login/StudentLogin";
 import RecruiterLogin from "./Components-Login/RecruiterLogin";
 import TrainingCoordinatorLogin from "./Components-Login/TrainingCoordinatorLogin";
-import PlacementOfficerLogin from "./Components-Login/PlacementOfficerLogin";
 import ForgotPassword from "./Components-Login/ForgotPassword";
+import PlacementofficerLogin from "./Components-Login/PlacementofficerLogin";
 
 
 const router = createBrowserRouter([
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
 },
 {
   path:'/PRP_Portal/Login/PlacementOfficer',
-  element:<PlacementOfficerLogin/>
+  element:<PlacementofficerLogin/>
 },
 {
   path:'/PRP_Portal/Login/Recruiter',

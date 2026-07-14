@@ -105,7 +105,7 @@ const ForgotPassword = () => {
                                 <div className='UserLogin-Form-Input-Group'>
                                     <label htmlFor="UserId">University Email</label>
                                     <div style={{ display: "flex", flexDirection: "column" }}>
-                                        <input type="email" name="Email" id="UserId" placeholder="Enter your email" value={formValues.Email} onChange={handleForm} />
+                                        <input className={error.Email? "UserLogin-Form-Input-Errors":"UserLogin-Form-Input"} type="email" name="Email" id="UserId" placeholder="Enter your email" value={formValues.Email} onChange={handleForm} />
                                         {error.Email && <span className="TC-Reg-err-msg" style={{ color: 'red', fontSize: '12px' }}>{error.Email}</span>}
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@ const ForgotPassword = () => {
                                         <span
                                             className={`UserLogin-Request-Access-Link ${seconds > 0 ? 'disabled' : ''}`}
                                             onClick={handleResend}
-                                            style={{ cursor: seconds > 0 ? 'not-allowed' : 'pointer', opacity: seconds > 0 ? 0.6 : 1 }}
+                                            style={{ cursor: seconds > 0 ? 'not-allowed' : 'pointer',color:seconds> 0 ? "red":''}}
                                         >
                                             {seconds > 0 ? `Resend (${seconds}s)` : 'Resend'}
                                         </span>

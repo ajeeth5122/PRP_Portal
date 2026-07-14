@@ -14,12 +14,12 @@ const PlacementofficerLogin = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState({});
 
-    const registeredUsers = [
-        { email: "Ajeeth@dj.com", password: "dj@12345" },
-        { email: "Ajeeth@aj.com", password: "Aj@12345" },
-        { email: "Ajeeth@bj.com", password: "bj@12345" },
-        { email: "Ajeeth@cj.com", password: "Cj@12345" }
-    ];
+    // const registeredUsers = [
+    //     { email: "Ajeeth@dj.com", password: "dj@12345" },
+    //     { email: "Ajeeth@aj.com", password: "Aj@12345" },
+    //     { email: "Ajeeth@bj.com", password: "bj@12345" },
+    //     { email: "Ajeeth@cj.com", password: "Cj@12345" }
+    // ];
 
     const validateForm = () => {
         const newErrors = {};
@@ -44,15 +44,15 @@ const PlacementofficerLogin = () => {
         
         if (!validateForm()) return;
     
-        const userExists = registeredUsers.find(
-            (user) => 
-                user.email.toLowerCase() === formValues.Email.trim().toLowerCase() && 
-                user.password === formValues.password
-        );
-        if (!userExists) {
-            setError({ loginError: "Invalid Email or Password. Please try again." });
-            return;
-        }
+        // const userExists = registeredUsers.find(
+        //     (user) => 
+        //         user.email.toLowerCase() === formValues.Email.trim().toLowerCase() && 
+        //         user.password === formValues.password
+        // );
+        // if (!userExists) {
+        //     setError({ loginError: "Invalid Email or Password. Please try again." });
+        //     return;
+        // }
 
         alert("Login Successful");
     }
@@ -94,19 +94,20 @@ const PlacementofficerLogin = () => {
                 <div className="UserLogin-Form-Center-Wrapper">
                     <form onSubmit={handleSubmit} className='UserLogin-Form-Box'>
                         <div className="UserLogin-Form-Header-Text">
-                            <h4>PlacementOfficer Login</h4>
+                            <h4>PlacementOfficer</h4>
                             <p>Enter your credentials to access the portal.</p>
-                        </div>
-                        {error.loginError && (
+                            {error.loginError && (
                             <div style={{ color: 'red', marginBottom: '15px', fontSize: '14px', textAlign: 'center' }}>
                                 {error.loginError}
                             </div>
                         )}
+                        </div>
+                        
 
                         <div className='UserLogin-Form-Input-Group'>
                             <label htmlFor="UserId">University Email</label>
                             <div style={{display:"flex",flexDirection:"column"}}>
-                                <input type="email" name="Email" id="UserId" placeholder="Enter your email" value={formValues.Email} onChange={handleForm}  />                                           
+                                <input className={error.Email? "UserLogin-Form-Input-Errors":"UserLogin-Form-Input"} type="email" name="Email" id="UserId" placeholder="Enter your email" value={formValues.Email} onChange={handleForm}  />                                           
                                 {error.Email && <span className="TC-Reg-err-msg" style={{color: 'red', fontSize: '12px'}}>{error.Email}</span>}
                             </div>
                         </div>
@@ -114,15 +115,16 @@ const PlacementofficerLogin = () => {
                         <div className='UserLogin-Form-Input-Group'>
                             <label htmlFor="Password">Password</label>
                             <div style={{display:"flex",flexDirection:"column"}}>
-                            <div className='UserLogin-Form-Input' style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                            <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
                                 <input
+                                    className={error.password? "UserLogin-Form-Input-Errors":"UserLogin-Form-Input"}
                                     type={showPassword ? "text" : "password"}
                                     name="password"
                                     placeholder="********"
                                     id='Password'
                                     value={formValues.password}
-                                    onChange={handleForm} 
-                                    style={{ width: '100%', paddingRight: '40px' }} 
+                                    onChange={handleForm}
+                                    style={{ width: '100%', paddingRight: '40px' }}
                                 />
                                 <img
                                     src={showPassword ? Hide : EyeImg}
@@ -167,4 +169,4 @@ const PlacementofficerLogin = () => {
     )
 }
 
-export default PlacementofficerLogin
+export default PlacementofficerLogin;
