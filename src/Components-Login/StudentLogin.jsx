@@ -5,6 +5,7 @@ import ProductLogo from '../assets/RegistrationAssets/Eduhire.png';
 import EyeImg from "../assets/RegistrationAssets/EyeIcon.png";
 import Hide from "../assets/RegistrationAssets/HidePwd.png";
 import './StudentLogin.css'
+import Modalbox from '../Resusable-Components/Modalbox';
 
 const StudentLogin = () => {
     const navigate = useNavigate()
@@ -13,13 +14,8 @@ const StudentLogin = () => {
     const [formValues, setFormValues] = useState(initialValues)
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState({});
+    const [modal, setModal] = useState({ show: false, success: false, message: "" });
 
-    // const registeredUsers = [
-    //     { email: "Ajeeth@dj.com", password: "dj@12345" },
-    //     { email: "Ajeeth@aj.com", password: "Aj@12345" },
-    //     { email: "Ajeeth@bj.com", password: "bj@12345" },
-    //     { email: "Ajeeth@cj.com", password: "Cj@12345" }
-    // ];
 
     const validateForm = () => {
         const newErrors = {};
@@ -44,23 +40,20 @@ const StudentLogin = () => {
         
         if (!validateForm()) return;
     
-        // const userExists = registeredUsers.find(
-        //     (user) => 
-        //         user.email.toLowerCase() === formValues.Email.trim().toLowerCase() && 
-        //         user.password === formValues.password
-        // );
-        // if (!userExists) {
-        //     setError({ loginError: "Invalid Email or Password. Please try again." });
-        //     return;
-        // }
-
-        alert("Login Successful");
+        setModal({
+            show: true,
+            success: true,
+            message: "Login Successful! Welcome back."
+        });
     }
 
     const handleForm = (e) => {
         const { name, value } = e.target;
         setFormValues({ ...formValues, [name]: value });
         setError({ ...error, [name]: "", loginError: "" });
+    };
+    const closeModal = () => {
+        setModal({ show: false, success: false, message: "" });
     };
 
     return (
@@ -85,6 +78,7 @@ const StudentLogin = () => {
                         type="button"
                         onClick={() => navigate('/PRP_Portal/Login')}
                         className="UserLogin-Back-Btn"
+                        style={{position:"absolute"}}
                     >
                         <img src={Back} alt="back" width={13} style={{ marginRight: "5px" }} />
                         Back
@@ -103,7 +97,7 @@ const StudentLogin = () => {
                         )}
                         </div>
                         
-
+                        <div style={{display:"flex", flexDirection:"column",gap:"7px"}}>
                         <div className='UserLogin-Form-Input-Group'>
                             <label htmlFor="UserId">University Email</label>
                             <div style={{display:"flex",flexDirection:"column"}}>
@@ -142,6 +136,7 @@ const StudentLogin = () => {
                             {error.password && <span className="TC-Reg-err-msg" style={{color: 'red', fontSize: '12px'}}>{error.password}</span>}
                             </div>
                         </div>
+                        </div>
 
                         <div className="UserLogin-Form-Submit-Wrapper">
                             <button type="submit" className="TC-Reg-btn">Submit</button>
@@ -166,6 +161,13 @@ const StudentLogin = () => {
                     </div>
                 </div>
             </div>
+            
+                <Modalbox 
+                show={modal.show} 
+                success={modal.success} 
+                message={modal.message} 
+                onClose={closeModal}/>
+            
         </>
     )
 }

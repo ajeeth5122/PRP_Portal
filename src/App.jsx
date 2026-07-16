@@ -9,12 +9,17 @@ import RecruiterLogin from "./Components-Login/RecruiterLogin";
 import TrainingCoordinatorLogin from "./Components-Login/TrainingCoordinatorLogin";
 import ForgotPassword from "./Components-Login/ForgotPassword";
 import PlacementofficerLogin from "./Components-Login/PlacementofficerLogin";
+import AdminLogin from "./Components-Login/AdminLogin";
 
 
 const router = createBrowserRouter([
 {
   path: '/PRP_Portal',
   element: <LandingPage/>,
+},
+{
+  path: '/PRP_Portal/Admin',
+  element: <AdminLogin/>,
 },
 {
   path:'/PRP_Portal/UserRegistration',

@@ -46,7 +46,7 @@
 .UserLogin-Form-Box {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     width: 100%;
     max-width: 448px;
     padding: 20px;
@@ -212,7 +212,7 @@
         padding: 0;
         /* min-height: calc(100vh - 100px); */
         box-sizing: border-box;
-        margin-bottom: 12px;
+        /* margin-bottom: 12px; */
     }
 
     .UserLogin-Form-Box {

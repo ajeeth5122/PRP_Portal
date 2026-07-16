@@ -5,6 +5,7 @@ import ProductLogo from '../assets/RegistrationAssets/Eduhire.png';
 import EyeImg from "../assets/RegistrationAssets/EyeIcon.png";
 import Hide from "../assets/RegistrationAssets/HidePwd.png";
 import './StudentLogin.css'
+import Modalbox from '../Resusable-Components/Modalbox';
 
 const TrainingCoordinatorLogin = () => {
     const navigate = useNavigate()
@@ -13,6 +14,7 @@ const TrainingCoordinatorLogin = () => {
     const [formValues, setFormValues] = useState(initialValues)
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState({});
+    const [modal, setModal] = useState({ show: false, success: false, message: "" });
 
     // const registeredUsers = [
     //     { email: "Ajeeth@dj.com", password: "dj@12345" },
@@ -38,23 +40,32 @@ const TrainingCoordinatorLogin = () => {
         return Object.keys(newErrors).length === 0;
     };
 
-   const handleSubmit = (e) => {
+       const handleSubmit = (e) => {
         e.preventDefault();
         setError({});
         
         if (!validateForm()) return;
     
         // const userExists = registeredUsers.find(
-        //     (user) => 
-        //         user.email.toLowerCase() === formValues.Email.trim().toLowerCase() && 
-        //         user.password === formValues.password
+        //      (user) => 
+        //          user.email.toLowerCase() === formValues.Email.trim().toLowerCase() && 
+        //          user.password === formValues.password
         // );
-        // if (!userExists) {
-        //     setError({ loginError: "Invalid Email or Password. Please try again." });
+        //  if (!userExists)  {
+        //     setModal({
+        //         show: true,
+        //         success: false,
+        //         message: "Incorrect Credentials! Please check your email and password."
+        //     });
         //     return;
         // }
 
-        alert("Login Successful");
+        setModal({
+            show: true,
+            success: true,
+            message: "Login Successful! Welcome back."
+        });
+        
     }
 
     const handleForm = (e) => {
@@ -62,6 +73,10 @@ const TrainingCoordinatorLogin = () => {
         setFormValues({ ...formValues, [name]: value });
         setError({ ...error, [name]: "", loginError: "" });
     };
+    const closeModal = () => {
+        setModal({ show: false, success: false, message: "" });
+    };
+
 
     return (
         <>
@@ -85,6 +100,7 @@ const TrainingCoordinatorLogin = () => {
                         type="button"
                         onClick={() => navigate('/PRP_Portal/Login')}
                         className="UserLogin-Back-Btn"
+                        style={{position:"absolute"}}
                     >
                         <img src={Back} alt="back" width={13} style={{ marginRight: "5px" }} />
                         Back
@@ -103,7 +119,7 @@ const TrainingCoordinatorLogin = () => {
                         )}
                         </div>
                        
-
+                        <div style={{display:"flex", flexDirection:"column",gap:"7px"}}>
                         <div className='UserLogin-Form-Input-Group'>
                             <label htmlFor="UserId">Login ID / Email</label>
                             <div style={{display:"flex",flexDirection:"column"}}>
@@ -143,7 +159,7 @@ const TrainingCoordinatorLogin = () => {
                             {error.password && <span className="TC-Reg-err-msg" style={{color: 'red', fontSize: '12px'}}>{error.password}</span>}
                             </div>
                         </div>
-
+                        </div>          
                         <div className="UserLogin-Form-Submit-Wrapper">
                             <button type="submit" className="TC-Reg-btn">Submit</button>
                         </div>
@@ -167,6 +183,11 @@ const TrainingCoordinatorLogin = () => {
                     </div>
                 </div>
             </div>
+            <Modalbox 
+                show={modal.show} 
+                success={modal.success} 
+                message={modal.message} 
+                onClose={closeModal}/>
         </>
     )
 }

@@ -5,14 +5,17 @@ import EyeImg from "../assets/RegistrationAssets/EyeIcon.png";
 import Hide from "../assets/RegistrationAssets/HidePwd.png";
 import SearchImg from "../assets/RegistrationAssets/SearchIcon.png";
 import RightArrowImg from "../assets/RegistrationAssets/RightArrow.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useData } from '../DataProvider';
+import Modalbox from '../Resusable-Components/Modalbox';
 
 const RecruiterRegistration = () => {
+    const navigate = useNavigate()
     const { user, setUser } = useData()
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [errors, setErrors] = useState({});
+    const [modal, setModal] = useState({ show: false, success: false, message: "" });
 
     const [formData, setFormData] = useState({
         fullName: "",
@@ -55,7 +58,7 @@ const RecruiterRegistration = () => {
         }
         if (!formData.phoneNumber.trim()) {
             newErrors.phoneNumber = 'Phone number is required';
-        } else if (regexofMobile.test(formData.phoneNumber)) {
+        } else if (!regexofMobile.test(formData.phoneNumber)) {
             newErrors.phoneNumber = 'Must be 10 digits';
         }
         if (!formData.company.trim()) newErrors.company = 'Company Name is Required';
@@ -123,12 +126,19 @@ const RecruiterRegistration = () => {
                 confirmPassword: "",
                 terms: false,
             })
+            setModal({
+                show: true,
+                success: true,
+                message: "Successfully Registered! Please Login."
+            });
 
-            console.log('Form Submitted Data:', formData);
-            alert('Registration Successful!');
         }
     };
 
+    const closeModal = () => {
+        setModal({ show: false, success: false, message: "" });
+        navigate('/PRP_Portal/Login');
+    };
     return (
         <div className="TC-Reg-card">
             <div className="TC-Reg-header">
@@ -156,7 +166,7 @@ const RecruiterRegistration = () => {
                         <label>Phone Number</label>
                         <div className="TC-Reg-phone-box">
                             <div style={{ width: "60px" }} className="Stu-Reg-select-input-wrapper">
-                                <select className="Stu-Reg-form-select" >
+                                <select className="Stu-Reg-form-select" name='contrycode' >
                                     <option>+1</option>
                                     <option>+91</option>
                                     <option>+44</option>
@@ -269,6 +279,8 @@ const RecruiterRegistration = () => {
             <p className="TC-Reg-login-redirect">
                 Already have an account? <span className="TC-Reg-purple-link TC-Reg-bold">Log in</span>
             </p>
+
+            <Modalbox show={modal.show} success={modal.success} message={modal.message} onClose={closeModal} />
 
         </div>
     )

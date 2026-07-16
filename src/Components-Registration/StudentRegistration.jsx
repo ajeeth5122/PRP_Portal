@@ -8,11 +8,13 @@ import Hide from "../assets/RegistrationAssets/HidePwd.png";
 import './StudentRegistration.css';
 import { Link } from 'react-router-dom';
 import { useData } from '../DataProvider';
+import Modalbox from '../Resusable-Components/Modalbox';
 
 const StudentRegistration = () => {
     const { user, setUser } = useData()
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [modal, setModal] = useState({ show: false, success: false, message: "" });
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -129,9 +131,17 @@ const StudentRegistration = () => {
                 terms: false
             })
 
-            console.log('Form Submitted Data:', formData);
-            alert('Registration Successful!');
+            setModal({
+                show: true,
+                success: true,
+                message: "Successfully Registered! Please Login."
+            });
         }
+    };
+
+    const closeModal = () => {
+        setModal({ show: false, success: false, message: "" });
+        navigate('/PRP_Portal/Login');
     };
     return (
         <div className="TC-Reg-card">
@@ -283,7 +293,6 @@ const StudentRegistration = () => {
                     </div>
                     {errors.terms && <div className="TC-Reg-err-msg" style={{ marginBottom: '10px' }}>{errors.terms}</div>}
                 </div>
-                {errors.terms && <div className="TC-Reg-err-msg" style={{ textAlign: 'center', marginBottom: '10px' }}>{errors.terms}</div>}
 
                 <div style={{ display: "flex", justifyContent: "center", marginTop: "25px" }}>
                     <button type="submit" className="TC-Reg-btn">
@@ -297,7 +306,7 @@ const StudentRegistration = () => {
             <p className="TC-Reg-login-redirect">
                 Already have an account? <span className="TC-Reg-purple-link TC-Reg-bold">Log in</span>
             </p>
-
+            <Modalbox show={modal.show} success={modal.success} message={modal.message} onClose={closeModal} />
         </div>
     );
 };

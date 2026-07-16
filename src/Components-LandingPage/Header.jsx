@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="LandingPage-header">
       <div className='UserRegistration-Logo-Title'>
-        <img src={ProductLogo} width={40} alt="" />
+        <img style={{cursor:"pointer"}} onClick={()=>navigate('/PRP_Portal/Admin')} src={ProductLogo} width={40} alt="" />
         <div className='UserRegistration-Title'>
           <h4>EDUHIRE</h4>
           {/* <p>EMPOWERING CAREERS, CONNECTING FUTURES</p> */}
