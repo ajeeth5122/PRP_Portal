@@ -5,11 +5,12 @@ import EyeImg from "../assets/RegistrationAssets/EyeIcon.png";
 import DownArrow from "../assets/RegistrationAssets/DownArrow.png";
 import RightArrowImg from "../assets/RegistrationAssets/RightArrow.png";
 import Hide from "../assets/RegistrationAssets/HidePwd.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useData } from '../DataProvider';
 import Modalbox from '../Resusable-Components/Modalbox';
 
 const PlacementOfficerReg = () => {
+    const navigate=useNavigate();
     const { user, setUser } = useData()
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);

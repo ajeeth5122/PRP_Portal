@@ -6,12 +6,13 @@ import SearchImg from "../assets/RegistrationAssets/SearchIcon.png";
 import DownArrow from "../assets/RegistrationAssets/DownArrow.png";
 import Hide from "../assets/RegistrationAssets/HidePwd.png";
 import './StudentRegistration.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useData } from '../DataProvider';
 import Modalbox from '../Resusable-Components/Modalbox';
 
 const StudentRegistration = () => {
-    const { user, setUser } = useData()
+    const navigate=useNavigate();
+    const { user, setUser } = useData();
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [modal, setModal] = useState({ show: false, success: false, message: "" });
