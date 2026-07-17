@@ -326,7 +326,7 @@ const PlacementOfficerReg = () => {
                     </button>
                 </div>
                 <p className="TC-Reg-login-redirect">
-                    Already have an account? <span className="TC-Reg-purple-link TC-Reg-bold">Log in</span>
+                    Already have an account? <span className="TC-Reg-purple-link TC-Reg-bold"  onClick={()=>navigate('/PRP_Portal/Login/PlacementOfficer')}>Log in</span>
                 </p>
             </form>
             <Modalbox show={modal.show} success={modal.success} message={modal.message} onClose={closeModal} />

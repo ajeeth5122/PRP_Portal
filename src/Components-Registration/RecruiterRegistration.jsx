@@ -277,7 +277,7 @@ const RecruiterRegistration = () => {
 
             </form>
             <p className="TC-Reg-login-redirect">
-                Already have an account? <span className="TC-Reg-purple-link TC-Reg-bold">Log in</span>
+                Already have an account? <span className="TC-Reg-purple-link TC-Reg-bold" onClick={()=>navigate('/PRP_Portal/Login/Recruiter')}>Log in</span>
             </p>
 
             <Modalbox show={modal.show} success={modal.success} message={modal.message} onClose={closeModal} />
