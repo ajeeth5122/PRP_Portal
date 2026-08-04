@@ -318,7 +318,7 @@ const StudentDashboard = () => {
                     
                   </div>
                   <div className="student-dashboard-recommended-job-det">
-                  <h3>{job.title}</h3>
+                  <h3 className="std-Dashboard-recommended-job-title">{job.title}</h3>
                   <p className="student-dashboard-company-location">
                     {job.company} .{job.location}
                   </p>

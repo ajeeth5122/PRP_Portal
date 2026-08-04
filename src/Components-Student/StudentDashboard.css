@@ -27,7 +27,7 @@
 }
 
 .student-dashboard-sub-heading {
-    margin-top: 12px;
+    margin-top: 5px;
     font-size: 14px;
     color: #70798c;
 }
@@ -67,7 +67,8 @@
 }
 
 .student-dashboard-card-icon-container {
-    width: 34px;
+    max-width: 34px;
+    width: 100%;
     height: 34px;
     background: #f6ebff;
     border-radius: 12px;
@@ -107,18 +108,21 @@
 .student-dashboard-card-content {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 10px;
 }
 
 .student-dashboard-card-content h2 {
     font-size: 30px;
     font-weight: 900;
+    margin: 0;
 }
 
 .student-dashboard-card-content p {
     color: #24324b;
     font-size: 14px;
     font-weight: 500;
+    margin: 0;
 }
 
 .student-dashboard-progress-bar {
@@ -161,6 +165,7 @@
     font-size: 20px;
     font-weight: 700;
     color: #18253f;
+    margin: 0;
 }
 
 .student-dashboard-application-header button {
@@ -176,7 +181,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 28px;
+    padding: 15px 30px;
     border-bottom: 1px solid #ece8f7;
     transition: 0.3s;
 }
@@ -218,11 +223,13 @@
     font-weight: 700;
     color: #18253f;
     margin-bottom: 5px;
+
 }
 
 .student-dashboard-company-details p {
     font-size: 13px;
     color: #676070;
+    margin: 0;
 }
 
 .student-dashboard-application-right {
@@ -437,6 +444,9 @@
     transition: .3s;
     /* background-color: #5d39cb; */
 }
+.std-Dashboard-recommended-job-title{
+    margin: 0;
+}
 .student-dashboard-recommended-job-det{
     display: flex;
     flex-direction: column;
@@ -478,18 +488,19 @@
 .student-dashboard-recommended-job-card h3 {
     font-size: 16px;
     color: #0d0d0d;
+    margin: 0;
 }
 
 .student-dashboard-company-location {
     color: #3f3f3f;
     font-size: 12px;
-    /* margin-bottom: 6px; */
+    margin: 0;
 }
 
 .student-dashboard-job-type {
     color: #3f3f3f;
     font-size: 12px;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 }
 
 .student-dashboard-skill-container {
@@ -557,7 +568,7 @@
 }
 
 .student-dashboard-offer-title p {
-    margin-top: 6px;
+    /* margin-top: 6px; */
     font-size: 12px;
     color: #6b7280;
 }
@@ -584,7 +595,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 34px;
-    row-gap: 18px;
+    row-gap: 10px;
     margin-bottom: 24px;
 }
 .student-dashboard-offer-item{
@@ -617,7 +628,7 @@
 .student-dashboard-offer-value {
     margin: 0;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 

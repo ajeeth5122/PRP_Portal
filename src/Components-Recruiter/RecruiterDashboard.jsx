@@ -231,7 +231,7 @@ const interviews= [
                                             <div className="Rec-Dashboard-user-cell">
                                                 <img src={item.avatar} alt={item.candidateName} className="Rec-Dashboard-avatar" />
                                                 <div className='Rec-Dashboard-user-details'>
-                                                <strong>{item.candidateName}</strong>
+                                                <h4>{item.candidateName}</h4>
                                                 <p className={`Rec-Dashboard-score-badge ${item.scoreClass}`}>{item.score}</p>
                                                 </div>
                                             </div>
@@ -244,7 +244,7 @@ const interviews= [
                                         </td>
                                         <td>
                                             <div className="Rec-Dashboard-schedule-cell">
-                                                <strong>{item.time}</strong>
+                                                <h4>{item.time}</h4>
                                                 <p className={item.typeClass}>{item.type}</p>
                                             </div>
                                         </td>
