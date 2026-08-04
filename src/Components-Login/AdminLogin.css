@@ -1,0 +1,305 @@
+.AdminLogin-Container{
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: 40% 50%; */
+    box-sizing: border-box;
+    background: linear-gradient(120deg, #8D61D7,#7B5AF5,#B596FF);
+    gap: 30px;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+.AdminLogin-Welcome-Screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: linear-gradient(120deg, #8D61D7,#7B5AF5,#B596FF); */
+    border-radius: 5px;
+    padding:50px 0px 0px 50px;
+    flex: 1.5;
+}
+.AdminLogin-Title{
+    display: flex;
+    flex-direction: column;
+}
+.AdminLogin-Title h4{
+    margin: 0;
+    font-size: 16px;
+}
+.AdminLogin-Title p{
+    margin: 0;
+    letter-spacing: 1.5px;
+    color: #FFFFFF99;
+    font-size: 16px;
+}
+.AdminLogin-Logo-Title{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 400;
+    color: #fff;
+    padding-left: 50px;
+}
+
+.AdminLogin-Welcome-container{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.AdminLogin-HR{
+    height: 4px;
+    width: 40px;
+    background-color:#FFD5B2 ;
+    margin-bottom: 20px;
+}
+
+.AdminLogin-Welcome-Text{
+    font-size: 38px;
+    color:#fff;
+    margin: 0;
+    margin-top: 10px;
+}
+.AdminLogin-Welcome-Text span{
+    color: #FFD5B2;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+}
+.AdminLogin-Welcome-Desc{
+    margin-top: 10px;
+    max-width: 450px;
+    font-size: 18px;
+    color: #FFFFFFB2;
+    line-height: 28.8px;
+}
+/* .AdminLogin-Image{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    box-sizing: border-box;
+} */
+.AdminLogin-Image{
+    max-width: 589px;
+    /* max-height: 350px; */
+    width: 100%;
+    border-radius: 8px;
+}
+
+.AdminLogin-Heading{
+    font-weight: 700;
+}
+.AdminLogin-Heading-desc{
+    font-weight: 500;
+}
+.Admin-Login-Form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.AdminLogin-Form-Header-Text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.AdminLogin-Form-Header-Text p {
+    margin: 2px 0;
+    font-size: 16px;
+    color: #484555;
+    text-align: center;
+}
+.AdminLogin-Form-Header-Text h4 {
+    margin: 0 0 5px 0;
+    font-size: 36px;
+    color: #1C1A23;
+    text-align: center;
+}
+.AdminLogin-Form-Input-Group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.AdminLogin-Form-Input-Group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #484555;
+}
+.AdminLogin-Form-Input {
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    background-color: #F7F1FF;
+}
+.AdminLogin-forgot-pwd-cont{
+    display: flex;
+    justify-content: space-between;
+}
+.AdminLogin-Rem-Input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.AdminLogin-Rem-Input input[type="checkbox"] {
+    width: 17px;  
+    height: 17px;
+    cursor: pointer;
+}
+.AdminLogin-Rem-Input p{
+    color: #484555;
+    margin: 0px;
+}
+.AdminLogin-forgot-pwd-cont p{
+    margin: 0;
+}
+.AdminLogin-forgot-pwd{
+    color: #8D61D7;
+    font-weight: 500;
+    cursor: pointer;
+}
+.AdminLogin-forgot-pwd:hover{
+    font-weight: 700;
+    cursor: pointer;
+}
+.AdminLogin-Form-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 1px 4px 12px 2px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #ffffff30;
+    /* background-color:  #8c61d756; */
+
+}
+.AdminLogin-Form-Center-Wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+    border-radius: 10px;
+}
+.AdminLogin-Form-Cred{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+.Admin-Secure-Access{
+    display: flex;
+    background-color: #F7F1FF;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    gap: 15px;
+    border-radius: 24px;
+    width: fit-content;
+}
+.Admin-Secure-Access-Title{
+    font-size: 16px;
+    margin: 0;
+}
+.Admin-Secure-Access-desc{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+}
+.Admin-Secure-Access-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .AdminLogin-Container {
+        gap: 20px;
+    }
+
+    .AdminLogin-Welcome-container {
+        padding-left: 20px;
+    }
+
+    .AdminLogin-Welcome-Text {
+        font-size: 30px; 
+    }
+
+    .AdminLogin-Welcome-Text span {
+        font-size: 32px;
+    }
+
+    .AdminLogin-Welcome-Desc {
+        font-size: 15px;
+        max-width: 350px; 
+        line-height: 24px;
+    }
+
+
+    .AdminLogin-Image img {
+        max-width: 350px;
+        max-height: 250px;
+        margin-left: 20px;
+    }
+
+    
+    .AdminLogin-Form-Center-Wrapper {
+        max-width: 450px; 
+        margin: 10px;
+    }
+
+    .AdminLogin-Form-Box {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .AdminLogin-Form-Header-Text h4 {
+        font-size: 28px;
+    }
+    .AdminLogin-Logo-Title{
+        padding-left: 15px;
+        font-size: 12px;
+    }
+    .AdminLogin-Logo-Title p{
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .AdminLogin-Container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        gap: 0px;
+    }
+
+    .AdminLogin-Welcome-Screen {
+        display: none; 
+    }
+
+    .AdminLogin-Form-Center-Wrapper {
+        margin: 10px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .AdminLogin-Form-Box {
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+
+    .AdminLogin-Form-Header-Text h4 {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,799 @@
+.PO-Dashboard-container {
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+}
+ 
+.PO-Dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+ 
+.PO-Dashboard-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+}
+ 
+.PO-Dashboard-upcoming-drives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+ 
+.PO-Dashboard-QuickActions {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+ 
+.PO-Dashboard-BarChart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+ 
+.PO-Dashboard-card {
+  background: #f5f4f7;
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+ 
+.PO-Dashboard-chart-cards {
+  background: #f5f4f7;
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+ 
+.PO-Dashboard-calendar-card {
+  background: #f5f4f7;
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+ 
+.PO-Dashboard-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  /* background-color: #3b82f6; */
+}
+ 
+.PO-Dashboard-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  
+}
+ 
+.PO-Dashboard-card-subtitle {
+  font-size: 14px;
+  color: #8e8e93;
+  margin: 4px 0 2px 0;
+}
+ 
+.PO-Dashboard-link-btn {
+  background: none;
+  border: none;
+  color: #8b5cf6;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+ 
+.PO-Dashboard-stat-card {
+  border-radius: 14px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.PO-Dashboard-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+ 
+.PO-Dashboard-stat-label {
+  color: #2a2f36;
+  font-size: 0.88rem;
+  margin: 0 0 10px 0;
+}
+ 
+.PO-Dashboard-stat-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+ 
+.PO-Dashboard-pipeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+ 
+.PO-Dashboard-pipeline-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+ 
+.PO-Dashboard-pipeline-box {
+  width: 100%;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+ 
+.PO-Dashboard-pipeline-stage {
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+ 
+.PO-Dashboard-pipeline-count {
+  color: #a855f7;
+  font-size: 14px;
+  font-weight: 600;
+}
+ 
+.PO-Dashboard-pipeline-arrow-box {
+  padding: 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.PO-Dashboard-down-arrow-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+ 
+.PO-Dashboard-priority-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+ 
+.PO-Dashboard-priority-item {
+  background: #eae8ed;
+  padding: 16px 20px ;
+  border-radius: 12px;
+  margin: 0 30px;
+  font-size: 0.9rem;
+  color: #1f2937;
+  text-align: center;
+}
+ 
+.PO-Dashboard-view-task-btn {
+  background: none;
+  border: none;
+  color: #8b5cf6;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+ 
+.PO-Dashboard-btn-arrow-img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+ 
+.PO-Dashboard-drives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.PO-Dashboard-drives-item-Wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+ 
+.PO-Dashboard-drive-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* background-color: red; */
+}
+ 
+.PO-Dashboard-company-logo-box {
+  width: 50px;
+  height: 50px;
+  background: #eae8ed;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.PO-Dashboard-drive-logo-img {
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+ 
+.PO-Dashboard-sched-logo-img {
+  width: 40px;
+  object-fit: contain;
+  padding: 2px;
+  box-sizing: border-box;
+}
+ 
+.PO-Dashboard-drive-details h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+ 
+.PO-Dashboard-drive-details p {
+  font-size: 12px;
+  color: #6b7280;
+}
+ 
+.PO-Dashboard-drive-details span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+ 
+.PO-Dashboard-qa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+ 
+.PO-Dashboard-qa-btn {
+  border: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.82rem;
+}
+ 
+.PO-Dashboard-qa-btn img {
+  width: 18px;
+  height: 18px;
+}
+ 
+.PO-Dashboard-companies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+ 
+.PO-Dashboard-company-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.PO-Dashboard-company-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 80px;
+}
+ 
+.PO-Dashboard-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #8b5cf6;
+}
+ 
+.PO-Dashboard-company-name {
+  font-size: 0.88rem;
+  color: #1f2937;
+}
+ 
+.PO-Dashboard-bar-container {
+  flex: 1;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  margin: 0 16px;
+  overflow: hidden;
+}
+ 
+.PO-Dashboard-bar-fill {
+  height: 100%;
+  background: #8b5cf6;
+  border-radius: 4px;
+}
+ 
+.PO-Dashboard-company-count {
+  font-size: 0.88rem;
+  color: #1f2937;
+}
+ 
+.PO-Dashboard-chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+ 
+.PO-Dashboard-legend-offered,
+.PO-Dashboard-legend-applied {
+  display: flex;
+  align-items: center;
+  color: #1f2937;
+}
+ 
+.PO-Dashboard-legend-offered::before,
+.PO-Dashboard-legend-applied::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+ 
+.PO-Dashboard-legend-offered::before {
+  background: #e9d5ff;
+}
+ 
+.PO-Dashboard-legend-applied::before {
+  background: #8b5cf6;
+}
+ 
+.PO-Dashboard-donut-flex {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-top: 10px;
+  gap: 25px;
+}
+ 
+.PO-Dashboard-donut-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+ 
+.PO-Dashboard-pie-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+ 
+.PO-Dashboard-pie-center-text strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #000;
+}
+ 
+.PO-Dashboard-pie-center-text span {
+  font-size: 0.8rem;
+  color: #000;
+  font-weight: bold;
+}
+ 
+.PO-Dashboard-pie-side-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 120px;
+}
+ 
+.PO-Dashboard-pie-legend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+ 
+.PO-Dashboard-pie-legend-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+ 
+.PO-Dashboard-pie-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+ 
+.PO-Dashboard-dept-name { color: #1f2937; }
+.PO-Dashboard-dept-val { color: #1f2937; font-weight: 500; }
+ 
+.PO-Dashboard-activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+ 
+.PO-Dashboard-activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+ 
+.PO-Dashboard-act-text { color: #111827; }
+.PO-Dashboard-act-time { color: #8e8e93; font-size: 0.85rem; }
+ 
+.PO-Dashboard-calendar-strip {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+ 
+.PO-Dashboard-calendar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  color: #6b7280;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+ 
+.PO-Dashboard-day-active {
+  background: #8b5cf6;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 8px 12px;
+}
+ 
+.PO-Dashboard-day-date {
+  font-weight: 600;
+}
+ 
+.PO-Dashboard-calendar-schedules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.PO-Dashboard-card-Header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+ 
+.PO-Dashboard-sched-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+ 
+.PO-Dashboard-mini-logo {
+  padding: 5px;
+  background: #eae8ed;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.PO-Dashboard-sched-body p {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  color: #374151;
+}
+ 
+.PO-Dashboard-sched-time {
+  font-weight: 600;
+  color: #111827 !important;
+}
+ 
+.PO-Dashboard-sched-role { color: #6b7280 !important; }
+.PO-Dashboard-sched-students { color: #9ca3af !important; }
+ 
+.PO-Dashboard-sched-meet {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-top: 8px;
+}
+ 
+.PO-Dashboard-meet-link-btn {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  padding: 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+ 
+.PO-Dashboard-sched-status-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 12px !important;
+}
+.PO-Dashboard-sched-column {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.PO-Dashboard-empty-text {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #8e8e93;
+  padding: 20px 0;
+}
+.PO-Dashboard-no-schedules {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #8e8e93;
+  font-size: 0.9rem;
+  padding: 20px 0;
+}
+.PO-Dashboard-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.PO-Dashboard-week-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.PO-Dashboard-nav-btn {
+  background: #f0f2f5;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.PO-Dashboard-nav-btn:hover {
+  background: #e4e7ed;
+}
+
+@media screen and (max-width: 1024px) {
+    .PO-Dashboard-stats-grid {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+
+  .PO-Dashboard-row,
+  .PO-Dashboard-upcoming-drives,
+  .PO-Dashboard-BarChart {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .PO-Dashboard-QuickActions {
+    gap: 16px;
+  }
+
+  .PO-Dashboard-card,
+  .PO-Dashboard-chart-cards,
+  .PO-Dashboard-calendar-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .PO-Dashboard-card-header {
+    margin-bottom: 14px;
+  }
+
+  .PO-Dashboard-card-title {
+    font-size: 16px;
+  }
+
+  .PO-Dashboard-card-subtitle {
+    font-size: 12px;
+  }
+
+  .PO-Dashboard-link-btn {
+    font-size: 13px;
+  }
+
+  .PO-Dashboard-stat-card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .PO-Dashboard-stat-value {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+  }
+
+  .PO-Dashboard-stat-label {
+    font-size: 0.78rem;
+    margin-bottom: 6px;
+  }
+
+  .PO-Dashboard-stat-badge {
+    font-size: 0.72rem;
+  }
+
+  .PO-Dashboard-pipeline-box {
+    padding: 8px 12px;
+  }
+
+  .PO-Dashboard-pipeline-stage {
+    font-size: 0.8rem;
+  }
+
+  .PO-Dashboard-pipeline-count {
+    font-size: 12px;
+  }
+
+  .PO-Dashboard-priority-list {
+    gap: 8px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+
+  .PO-Dashboard-priority-item {
+    padding: 10px 12px;
+    margin: 0 10px;
+    font-size: 0.8rem;
+  }
+
+  .PO-Dashboard-view-task-btn {
+    font-size: 0.8rem;
+  }
+
+  .PO-Dashboard-drives-list {
+    gap: 12px;
+  }
+
+  .PO-Dashboard-company-logo-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .PO-Dashboard-drive-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .PO-Dashboard-drive-details h4 {
+    font-size: 14px;
+  }
+
+  .PO-Dashboard-drive-details p,
+  .PO-Dashboard-drive-details span {
+    font-size: 11px;
+  }
+
+  .PO-Dashboard-qa-grid {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .PO-Dashboard-qa-btn {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .PO-Dashboard-qa-btn img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .PO-Dashboard-companies-list {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .PO-Dashboard-company-left {
+    width: 65px;
+  }
+
+  .PO-Dashboard-company-name,
+  .PO-Dashboard-company-count {
+    font-size: 0.78rem;
+  }
+
+  .PO-Dashboard-bar-container {
+    margin: 0 10px;
+  }
+
+
+  .PO-Dashboard-pie-center-text strong {
+    font-size: 0.95rem;
+  }
+
+  .PO-Dashboard-pie-center-text span {
+    font-size: 0.7rem;
+  }
+
+  .PO-Dashboard-pie-side-legend {
+    width: 100px;
+    gap: 8px;
+  }
+
+  .PO-Dashboard-pie-legend-row {
+    font-size: 0.75rem;
+  }
+
+  .PO-Dashboard-activities-list {
+    gap: 12px;
+  }
+
+  .PO-Dashboard-activity-item {
+    font-size: 0.8rem;
+  }
+
+  .PO-Dashboard-act-time {
+    font-size: 0.75rem;
+  }
+
+  .PO-Dashboard-calendar-strip {
+    margin-bottom: 16px;
+  }
+
+  .PO-Dashboard-calendar-day {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .PO-Dashboard-day-active {
+    padding: 6px 10px;
+  }
+
+  .PO-Dashboard-calendar-schedules {
+    gap: 12px;
+  }
+
+  .PO-Dashboard-sched-column {
+    padding: 12px;
+  }
+
+  .PO-Dashboard-sched-header {
+    margin-bottom: 8px;
+  }
+
+  .PO-Dashboard-mini-logo {
+    width: 38px;
+    height: 30px;
+  }
+
+  .PO-Dashboard-sched-body p,
+  .PO-Dashboard-sched-meet,
+  .PO-Dashboard-meet-link-btn,
+  .PO-Dashboard-sched-status-text {
+    font-size: 0.78rem;
+  }
+
+  .PO-Dashboard-nav-btn {
+    padding: 2px 8px;
+    font-size: 15px;
+  }
+}

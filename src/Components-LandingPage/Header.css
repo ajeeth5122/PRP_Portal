@@ -1,0 +1,110 @@
+.LandingPage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #B351B233;
+  /* background: linear-gradient(to right,#8037b092 0%,#fff 70%); */
+  box-sizing: border-box; 
+}
+
+.UserRegistration-Logo-Title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.UserRegistration-Title h4 {
+  margin: 0;
+  color: #8037B0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.LandingPage-header-logo h1 {
+  margin: 0;
+  color: #8037B0; 
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+}
+
+.LandingPage-header-btns {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.LandingPage-btn-login {
+  background: #fff;
+  border: none;
+  color: #8037B0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 6px; 
+  transition: all 0.2s ease;
+}
+
+.LandingPage-btn-get-started {
+  background-color: #8037B0;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px; 
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.LandingPage-btn-get-started:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.LandingPage-btn-login:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+
+@media screen and (max-width: 768px) {
+  .LandingPage-header {
+    padding: 15px 24px; 
+  }
+
+  .UserRegistration-Title h4 {
+    font-size: 20px; 
+  }
+  
+  .LandingPage-btn-login, 
+  .LandingPage-btn-get-started {
+    padding: 8px 18px; 
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .LandingPage-header {
+    padding: 12px 16px;
+  }
+
+  .UserRegistration-Logo-Title img {
+    width: 32px; 
+  }
+
+  .UserRegistration-Title h4 {
+    font-size: 18px;
+  }
+
+  .LandingPage-header-btns {
+    gap: 8px;
+  }
+
+  .LandingPage-btn-login, 
+  .LandingPage-btn-get-started {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+}

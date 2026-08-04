@@ -1,0 +1,281 @@
+.User-Login-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(160deg, #5B3FA1, #8D61D7);
+    min-height: 100vh;
+}
+
+.UserLogin-Back-Button-Wrapper {
+    width: fit-content;
+    margin: 10px 0;
+    padding: 0 75px;
+    box-sizing: border-box;
+}
+
+.UserLogin-Back-Btn {
+    background: #FFFFFF1A;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 1px 0px 2px 1px #ffffff30;
+
+}
+
+.UserLogin-Form-Center-Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.UserLogin-Form-Input {
+    border-radius: 4px;
+    outline: none;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.UserLogin-Form-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 448px;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 1px 4px 12px 2px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #ffffff30;
+    /* background-color:  #8c61d756; */
+
+}
+
+.UserLogin-Form-Box>img {
+    margin: 0 auto;
+}
+
+.UserLogin-Form-Header-Text h4 {
+    margin: 0 0 5px 0;
+    font-size: 36px;
+    color: #E5E7EB;
+}
+
+.UserLogin-Form-Header-Text p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #E5E7EB;
+}
+
+.UserLogin-Form-Input-Group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.UserLogin-Form-Input-Group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #E5E7EB;
+}
+
+.UserLogin-Form-Input {
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+.UserLogin-Form-Input-Errors {
+    padding: 12px 10px;
+    border: 2px solid #fa2c2c8f;
+    border-radius: 4px;
+    outline: none;
+}
+
+.UserLogin-Form-Submit-Wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.UserLogin-Links {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ffffff6e;
+    padding: 10px 5px;
+    margin: 15px 0;
+}
+
+.UserLogin-Links a {
+    text-decoration: none;
+    ;
+}
+
+.UserLogin-Request-Access-Link {
+    color: #60A5FA;
+    font-weight: 600;
+}
+
+.UserLogin-ForgetPassword-Link {
+    color: #FFFFFF;
+}
+
+.UserLogin-Request-Access-Link:hover {
+    color: #FFFFFF;
+}
+
+.UserLogin-ForgetPassword-Link:hover {
+    color: #60A5FA;
+}
+
+.back-to-Login-Links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.back-to-Login-Links a {
+    text-decoration: none;
+}
+
+.back-to-Login-Links p {
+    color: #FFF;
+}
+
+.UserLogin-Email-Otp-Title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.UserLogin-Email-Otp-Title p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #E5E7EB;
+    padding: 0 20px;
+}
+
+.UserLogin-Email-Otp-Title h4 {
+    margin: 0;
+    font-size: 36px;
+    color: #E5E7EB;
+}
+
+.Resent-Email-Link {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ffffff6e;
+    padding: 7px 5px;
+    color: #FFF;
+}
+
+.check-email-info-box p {
+    margin: 0;
+    color:#4A4452;
+    font-weight: 500;
+}
+
+.check-email-info-box {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    background-color: #E5EEFF;
+    gap: 11px;
+    margin: 0 20px;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+.UserLogin-Request-Access-Link.disabled {
+  pointer-events: none; 
+  color: #888;
+}
+
+@media screen and (max-width: 1024px) {
+    .UserLogin-Back-Button-Wrapper {
+        box-sizing: border-box;
+        padding: 0 75px;
+
+    }
+
+    .UserLogin-Form-Center-Wrapper {
+        padding: 0;
+        /* min-height: calc(100vh - 100px); */
+        box-sizing: border-box;
+        /* margin-bottom: 12px; */
+    }
+
+    .UserLogin-Form-Box {
+        max-width: 400px;
+        box-sizing: border-box;
+        padding: 10px 15px;
+    }
+
+    .UserLogin-Links {
+        padding: 10px 5px;
+        margin: 5px 0;
+    }
+
+    .UserLogin-Email-Otp-Title h4 {
+        font-size: 28px;
+    }
+
+    .UserLogin-Email-Otp-Title p {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+    .check-email-info-box {
+        margin: 0;
+        padding: 10px 12px;
+        font-size: 13px;
+        align-items: flex-start;
+    }
+
+    .UserLogin-Form-Box>img {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .UserLogin-Back-Button-Wrapper {
+        padding: 0 20px;
+    }
+
+    .UserLogin-Form-Header-Text h4 {
+        font-size: 28px;
+    }
+
+    .UserLogin-Form-Header-Text p {
+        font-size: 16px;
+    }
+
+    .UserLogin-Links {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .UserLogin-Email-Otp-Title h4 {
+        font-size: 24px;
+    }
+
+    .UserLogin-Email-Otp-Title p {
+        font-size: 13px;
+    }
+
+    .check-email-info-box {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,967 @@
+.student-dashboard-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+/* .student-dashboard-welcome-section {
+    margin-bottom: 40px;
+} */
+
+.student-dashboard-caution-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.student-dashboard-heading {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    color: #17233d;
+    line-height: 1.1;
+}
+
+.student-dashboard-heading span {
+    color: #6d47d9;
+}
+
+.student-dashboard-sub-heading {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #70798c;
+}
+
+.student-dashboard-stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.student-dashboard-stat-card {
+    height: 150px;
+    border-radius: 18px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.student-dashboard-orange-card {
+    background: linear-gradient(155deg, #ffb16d 0%, #f4b790 100%);
+}
+
+.student-dashboard-purple-card {
+    background: linear-gradient(155deg, #aa9ef7 0%, #7465fd 100%);
+}
+
+.student-dashboard-blue-card {
+    background: linear-gradient(155deg, #27c4e7 0%, #6cd8f5 100%);
+}
+
+.student-dashboard-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.student-dashboard-card-icon-container {
+    width: 34px;
+    height: 34px;
+    background: #f6ebff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-dashboard-card-icon {
+    width: 20px;
+}
+
+.student-dashboard-card-badge {
+    background: #f7b8c8;
+    color: #6F42B7;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.student-dashboard-card-badge_2 {
+    background: #f7b8c8;
+    color: #BA1A1A;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.student-dashboard-card-complete-text {
+    color: #7b3aed;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.student-dashboard-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.student-dashboard-card-content h2 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.student-dashboard-card-content p {
+    color: #24324b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.student-dashboard-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 50px;
+}
+
+.student-dashboard-progress-fill {
+    width: 85%;
+    height: 100%;
+    background: #0d9ed2;
+    border-radius: 50px;
+}
+
+.student-dashboard-middle-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    /* margin-bottom: 40px; */
+}
+
+.student-dashboard-application-container {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.student-dashboard-application-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 28px;
+    border-bottom: 1px solid #ece8f7;
+}
+
+.student-dashboard-application-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #18253f;
+}
+
+.student-dashboard-application-header button {
+    border: none;
+    background: transparent;
+    color: #6d47d9;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.student-dashboard-application-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;
+    border-bottom: 1px solid #ece8f7;
+    transition: 0.3s;
+}
+
+.student-dashboard-application-card:last-child {
+    border-bottom: none;
+}
+
+.student-dashboard-application-card:hover {
+    background: #faf9ff;
+}
+
+.student-dashboard-application-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1;
+}
+
+.student-dashboard-company-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    border: 1px solid #ddd2ef;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-dashboard-company-logo img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.student-dashboard-company-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #18253f;
+    margin-bottom: 5px;
+}
+
+.student-dashboard-company-details p {
+    font-size: 13px;
+    color: #676070;
+}
+
+.student-dashboard-application-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 25px;
+}
+
+.student-dashboard-status-badge {
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.student-dashboard-review {
+    background: #ebe4fb;
+    color: #666070;
+}
+
+.student-dashboard-interview {
+    background: #8658dd;
+    color: #fff;
+}
+
+.student-dashboard-application-right small {
+    margin-top: 6px;
+    font-size: 10px;
+    color: #777;
+}
+
+.student-dashboard-arrow {
+    font-size: 24px;
+    color: #8d8d8d;
+    cursor: pointer;
+}
+
+.student-dashboard-arrow:hover {
+    color: #6d47d9;
+    transform: translateX(4px);
+}
+
+.student-dashboard-upcoming-task-container {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .05);
+}
+
+.student-dashboard-upcoming-task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.student-dashboard-upcoming-task-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1b2b45;
+}
+
+.student-dashboard-task-card {
+    display: flex;
+    gap: 18px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.student-dashboard-task-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-dashboard-task-date-box {
+    width: 40px;
+    height: 42px;
+    background: #efe7ff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px 0;
+}
+
+.student-dashboard-task-date-box span {
+    display: block;
+    color: #6c45d8;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.student-dashboard-task-date-box small {
+    color: #6c45d8;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.student-dashboard-task-line {
+    width: 2px;
+    flex: 1;
+    background: #d7c9f7;
+    margin-top: 8px;
+}
+
+.student-dashboard-task-right {
+    flex: 1;
+}
+
+.student-dashboard-task-right h3 {
+    font-size: 13px;
+    color: #18253f;
+    margin-bottom: 6px;
+}
+
+.student-dashboard-task-time {
+    color: #555;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.student-dashboard-task-note {
+    background: #eef1ff;
+    border: 1px solid #cfd5ef;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #18253f;
+    line-height: 1.5;
+    width: 220px;
+}
+
+.student-dashboard-task-right small {
+    color: #4c4c4c;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.student-dashboard-middle-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.student-dashboard-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 0;
+}
+
+.student-dashboard-right-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+}
+
+.student-dashboard-recommended-container {
+    width: 100%;
+    /* background-color: #0d9ed2; */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.student-dashboard-recommended-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.student-dashboard-recommended-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #18253f;
+}
+
+.student-dashboard-recommended-navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.student-dashboard-nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #CCC3D4;
+    background: transparent;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.student-dashboard-recommended-job-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+}
+
+.student-dashboard-recommended-job-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid #ece8f7;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .05);
+    transition: .3s;
+    /* background-color: #5d39cb; */
+}
+.student-dashboard-recommended-job-det{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.student-dashboard-recommended-job-card:hover {
+    transform: translateY(-4px);
+}
+
+.student-dashboard-recommended-job-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.student-dashboard-recommended-company-logo {
+    border: 1px solid #ddd2ef;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.student-dashboard-recommended-company-logo img {
+    max-width: 40px;
+    width: 100%;
+}
+
+.student-dashboard-bookmark-button {
+    width: 20px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.student-dashboard-recommended-job-card h3 {
+    font-size: 16px;
+    color: #0d0d0d;
+}
+
+.student-dashboard-company-location {
+    color: #3f3f3f;
+    font-size: 12px;
+    /* margin-bottom: 6px; */
+}
+
+.student-dashboard-job-type {
+    color: #3f3f3f;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.student-dashboard-skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.student-dashboard-skill-chip {
+    background: #eef2ff;
+    color: #555;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.student-dashboard-offer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    /* margin-top: 30px; */
+}
+
+.student-dashboard-offer-card {
+    background: #ffffff;
+    border: 1px solid #ebe9f5;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.student-dashboard-offer-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.student-dashboard-offer-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid #d9d8ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.student-dashboard-offer-logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.student-dashboard-offer-title {
+    flex: 1;
+}
+
+.student-dashboard-offer-title h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #18253f;
+}
+
+.student-dashboard-offer-title p {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.student-dashboard-expire-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border: 1px solid #dcdce8;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.student-dashboard-offer-card hr {
+    border: none;
+    border-top: 1px solid #ece8f7;
+    margin: 18px 0;
+}
+
+.student-dashboard-offer-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 34px;
+    row-gap: 18px;
+    margin-bottom: 24px;
+}
+.student-dashboard-offer-item{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.student-dashboard-offer-label {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* gap: 10px; */
+    /* margin-bottom: 5px; */
+}
+
+.student-dashboard-offer-detail-icon {
+    width: 16px;
+    /* height: 25px; */
+}
+
+.student-dashboard-offer-label span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6d6d6e;
+}
+
+.student-dashboard-offer-value {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.student-dashboard-offer-buttons {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.student-dashboard-accept-btn,
+.student-dashboard-decline-btn {
+    /* height: 40px; */
+    /* max-width: 100px; */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.student-dashboard-accept-btn {
+    border: none;
+    background: #6d47d9;
+    color: #fff;
+}
+
+.student-dashboard-accept-btn:hover {
+    background: #5d39cb;
+}
+
+.student-dashboard-decline-btn {
+    background: #ffffff;
+    border: 1px solid #d9d5ea;
+    color: #616161;
+}
+
+.student-dashboard-decline-btn:hover {
+    background: #e1dfdf;
+}
+
+.student-dashboard-bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    /* margin-top: 30px; */
+}
+
+.student-dashboard-status-card,
+.student-dashboard-task-list-card {
+    background: #fff;
+    border: 1px solid #ECE8F7;
+    border-radius: 18px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.student-dashboard-status-card h2,
+.student-dashboard-task-list-card h2 {
+    font-size: 20px;
+}
+
+.student-dashboard-status-body {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.student-dashboard-chart {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    flex-shrink: 0;
+    margin: 15px;
+}
+
+.student-dashboard-chart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.student-dashboard-chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.student-dashboard-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.student-dashboard-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.student-dashboard-legend-item p {
+    font-size: 14px;
+    color: #30364D;
+}
+
+.student-dashboard-task-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.student-dashboard-task-header button {
+    border: none;
+    background: none;
+    color: #6d47d9;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.student-dashboard-task-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* margin-bottom: 28px; */
+    margin-left: 15px;
+}
+
+.student-dashboard-task-row:last-child {
+    margin-bottom: 0;
+}
+
+.student-dashboard-task-row img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.student-dashboard-task-row span {
+    font-size: 16px;
+    color: #535353;
+}
+
+.student-dashboard-task-list{
+    display: flex;
+    /* background-color: #0d9ed2; */
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .student-dashboard-main-container {
+        gap: 16px;
+    }
+
+    .student-dashboard-middle-container {
+        grid-template-columns: 1.8fr 1.2fr;
+        gap: 18px;
+    }
+
+    .student-dashboard-right-column {
+        min-width: 280px;
+    }
+
+    .student-dashboard-bottom-section {
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    /* Typography Adjustments */
+    .student-dashboard-heading {
+        font-size: 24px;
+    }
+
+    .student-dashboard-sub-heading {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .student-dashboard-application-header h2,
+    .student-dashboard-upcoming-task-header h2,
+    .student-dashboard-recommended-header h2,
+    .student-dashboard-status-card h2,
+    .student-dashboard-task-list-card h2 {
+        font-size: 17px;
+    }
+
+    .student-dashboard-stats-container {
+        gap: 16px;
+    }
+
+    .student-dashboard-stat-card {
+        height: 130px;
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .student-dashboard-card-content h2 {
+        font-size: 24px;
+    }
+
+    .student-dashboard-card-content p {
+        font-size: 12px;
+    }
+
+    .student-dashboard-card-badge,
+    .student-dashboard-card-badge_2 {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .student-dashboard-application-header {
+        padding: 16px 20px;
+    }
+
+    .student-dashboard-application-card {
+        padding: 14px 20px;
+    }
+
+    .student-dashboard-company-details h3 {
+        font-size: 14px;
+    }
+
+    .student-dashboard-company-details p {
+        font-size: 12px;
+    }
+
+    .student-dashboard-application-right {
+        margin-right: 12px;
+    }
+
+    .student-dashboard-status-badge {
+        padding: 6px 14px;
+        font-size: 10px;
+    }
+
+
+    .student-dashboard-upcoming-task-container {
+        padding: 16px;
+    }
+
+    .student-dashboard-task-card {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .student-dashboard-task-note {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .student-dashboard-recommended-job-card {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .student-dashboard-recommended-job-card h3 {
+        font-size: 14px;
+    }
+
+    .student-dashboard-company-location,
+    .student-dashboard-job-type {
+        font-size: 11px;
+    }
+
+    .student-dashboard-skill-chip {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    /* Offer Cards Section */
+    .student-dashboard-offer-container {
+        gap: 14px;
+        margin-top: 20px;
+    }
+
+    .student-dashboard-offer-card {
+        padding: 16px;
+    }
+
+    .student-dashboard-offer-title h3 {
+        font-size: 14px;
+    }
+
+    .student-dashboard-offer-details {
+        column-gap: 16px;
+        row-gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .student-dashboard-offer-value {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .student-dashboard-offer-buttons {
+        gap: 10px;
+    }
+
+    .student-dashboard-accept-btn,
+    .student-dashboard-decline-btn {
+        height: 36px;
+        font-size: 13px;
+    }
+
+    /* Status & Chart Section */
+    .student-dashboard-status-body {
+        gap: 30px; /* Reduced huge 100px gap */
+        justify-content: space-around;
+    }
+
+    .student-dashboard-chart {
+        width: 180px;
+        height: 180px;
+    }
+
+    .student-dashboard-chart-text {
+        font-size: 16px;
+    }
+
+    .student-dashboard-chart-legend {
+        gap: 5px;
+    }
+
+    .student-dashboard-legend-item p {
+        font-size: 12px;
+    }
+
+    /* Task Rows */
+    .student-dashboard-task-row {
+        margin-bottom: 18px;
+        margin-left: 0;
+    }
+
+    .student-dashboard-task-row span {
+        font-size: 14px;
+    }
+}
+

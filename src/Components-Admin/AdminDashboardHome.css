@@ -1,0 +1,199 @@
+.AdminDashboard-Container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  gap: 10px;
+}
+
+.AdminDashboard-Sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #7c4dff5a;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.Minimize {
+  max-width: 60px;
+  width: 100%;
+  padding: 10px 5px;
+  align-items: center;
+}
+
+.AdminDashboard-Maximize {
+  justify-content: center;
+  padding: 0;
+  display: flex;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.Adminsidebar-Title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  margin-top: 15px;
+}
+
+.Adminsidebar-Title img {
+  cursor: pointer;
+}
+
+.Adminside-Logo-Title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.UserRegistration-Title h4 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.AdminDashboard-Sidebar-List {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.AdminDashboard-Sidebar-Item-cont {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px 14px;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.704);
+}
+
+.AdminDashboard-Sidebar-Item-cont:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.AdminDashboard-Sidebar-Item-cont-Active {
+  display: flex;
+  padding: 10px 14px;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+  background: linear-gradient(to top, rgba(87, 14, 85, 0.75), #8D61D7);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.AdminDashboard-Sidebar-Item {
+  margin: 0;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.AdminDashboard-Mainsec {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #8c61d717;
+  min-height: 100vh;
+  box-sizing: border-box;
+  /* justify-content: center; */
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-4px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .AdminDashboard-Sidebar {
+    max-width: 240px;
+    padding: 2px;
+  }
+  .Minimize{
+    max-width: fit-content;
+  }
+
+  .UserRegistration-Title h4 {
+    font-size: 16px;
+  }
+
+  .AdminDashboard-Sidebar-Item {
+    font-size: 14px;
+  }
+
+  .AdminDashboard-Sidebar-Item-cont,
+  .AdminDashboard-Sidebar-Item-cont-Active {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .AdminDashboard-Mainsec {
+    padding: 15px;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .AdminDashboard-Sidebar {
+    max-width: fit-content;
+  }
+
+  .UserRegistration-Title h4 {
+    font-size: 14px;
+  }
+
+  .AdminDashboard-Sidebar-Item {
+    font-size: 13px;
+  }
+
+  .AdminDashboard-Sidebar-Item-cont img,
+  .AdminDashboard-Sidebar-Item-cont-Active img {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .AdminDashboard-Container {
+    flex-direction: column;
+  }
+
+  .AdminDashboard-Sidebar {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .Minimize {
+    max-width: 100%;
+  }
+
+  .AdminDashboard-Sidebar-List {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .AdminDashboard-Sidebar-Item {
+    display: none; 
+  }
+}
