@@ -18,6 +18,7 @@ import Threedots from "../assets/AdminAssets/ThreeDots.png"
 import Profile from "../assets/TCAssets/Trainerprof.png";
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Bar, Cell } from "recharts"
 import "./AdminDashboard.css";
+import DashboardHeader from "../Resusable-Components/DashboardHeader"
 
 const AdminDashboard = () => {
     const placementData = [
@@ -30,6 +31,7 @@ const AdminDashboard = () => {
     ];
     return (
         <div className="admin-dashboard-main">
+            <DashboardHeader userName={"Super Admin"} role={"Admin"}/>
             <div className="admin-dashboard-stats">
                 <div className="admin-dashboard-stat-card">
                     <div className="admin-dashboard-stat-header">
@@ -90,10 +92,10 @@ const AdminDashboard = () => {
                         </div>
                     </div>
                     <div className="admin-dashboard-chart-wrapper">
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer width="80%" height="100%">
                             <BarChart
                                 data={placementData}
-                                barCategoryGap="10%" >
+                                barCategoryGap="10px" >
                                 <XAxis
                                     dataKey="month"
                                     axisLine={false}
@@ -118,7 +120,7 @@ const AdminDashboard = () => {
                                 <Bar
                                     dataKey="placements"
                                     radius={[10, 10, 0, 0]}
-                                    maxBarSize={35
+                                    maxBarSize={55
                                     } >
                                     {placementData.map((item, index) => (
                                         <Cell
@@ -178,6 +180,7 @@ const AdminDashboard = () => {
                     <p className="admin-dashboard-activity-footer"> View Full History </p>
                 </div>
             </div>
+
             <div className="admin-dashboard-table-card">
                 <div className="admin-dashboard-table-header">
                     <h2 className="admin-dashboard-table-title">  User Management & Recent Activity</h2>

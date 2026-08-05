@@ -130,7 +130,7 @@
   /* box-shadow: 0px 0px 3px 1px #2564eb38 ; */
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   border-radius: 8px;
   padding: 15px;
   /* max-width: 750px; */
@@ -166,6 +166,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
+  margin-bottom: 10px;
   
 }
  
@@ -308,6 +309,12 @@
   align-items: center;
   gap: 10px;
 }
+.Rec-Dashboard-user-cell h4{
+  margin: 0;
+}
+.Rec-Dashboard-user-cell p{
+  margin: 0;
+}
 .Rec-Dashboard-user-details{
     display: flex;
     flex-direction: column;
@@ -351,13 +358,17 @@
 .Rec-Dashboard-position-cell p,
 .Rec-Dashboard-schedule-cell p {
   font-size:10px;
-  /* margin-top: 10px; */
+  margin: 0;
 }
 .Rec-Dashboard-position-cell h4{
     font-size: 14px;
     font-weight: 500;
+    margin: 0;
 }
- 
+.Rec-Dashboard-schedule-cell h4{
+  margin: 0;
+}
+
 .Rec-Dashboard-subtext-purple {
   color: #8b5cf6;
   font-weight: 600;

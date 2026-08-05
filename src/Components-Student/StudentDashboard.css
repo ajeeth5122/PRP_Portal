@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     gap: 20px;
+    box-sizing: border-box;
 }
 
 /* .student-dashboard-welcome-section {
@@ -39,9 +40,10 @@
 }
 
 .student-dashboard-stat-card {
-    height: 150px;
+    /* height: 150px; */
     border-radius: 18px;
     padding: 18px;
+    gap: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -202,9 +204,7 @@
 }
 
 .student-dashboard-company-logo {
-    width: 35px;
-    height: 35px;
-    border-radius: 12px;
+    border-radius: 50%;
     border: 1px solid #ddd2ef;
     background: #fff;
     display: flex;
@@ -213,8 +213,8 @@
 }
 
 .student-dashboard-company-logo img {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -222,7 +222,7 @@
     font-size: 16px;
     font-weight: 700;
     color: #18253f;
-    margin-bottom: 5px;
+    margin: 0;
 
 }
 
@@ -258,7 +258,7 @@
 
 .student-dashboard-application-right small {
     margin-top: 6px;
-    font-size: 10px;
+    font-size: 12px;
     color: #777;
 }
 
@@ -272,11 +272,17 @@
     color: #6d47d9;
     transform: translateX(4px);
 }
-
+.student-dashboard-upcoming-AddIcon{
+    background-color: #6F42B7;
+    border-radius: 5px;
+    width: 15px;
+    padding: 5px;
+}
 .student-dashboard-upcoming-task-container {
     background: #fff;
     border-radius: 18px;
     padding: 20px;
+    height: 100%;
     box-shadow: 0 8px 22px rgba(0, 0, 0, .05);
 }
 
@@ -307,12 +313,11 @@
 }
 
 .student-dashboard-task-date-box {
-    width: 40px;
-    height: 42px;
+    
     background: #efe7ff;
     border-radius: 10px;
     text-align: center;
-    padding: 4px 0;
+    padding: 10px 15px;
 }
 
 .student-dashboard-task-date-box span {
@@ -343,31 +348,40 @@
 .student-dashboard-task-right h3 {
     font-size: 13px;
     color: #18253f;
-    margin-bottom: 6px;
+    /* margin-bottom: 6px; */
+    margin: 0;
 }
 
 .student-dashboard-task-time {
     color: #555;
     font-size: 12px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    margin-top: 5px;
+}
+.Std-Upcoming-TaskList{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
 }
 
 .student-dashboard-task-note {
     background: #eef1ff;
     border: 1px solid #cfd5ef;
     border-radius: 10px;
-    padding: 14px;
-    font-size: 13px;
+    padding: 10px;
+    font-size: 12px;
     font-weight: 700;
     color: #18253f;
     line-height: 1.5;
-    width: 220px;
+    width: 80%;
+    /* width: 220px; */
 }
 
 .student-dashboard-task-right small {
     color: #4c4c4c;
     font-size: 13px;
     font-style: italic;
+    margin: 0;
 }
 
 .student-dashboard-middle-container {
@@ -391,17 +405,22 @@
 }
 
 .student-dashboard-recommended-container {
-    width: 100%;
-    /* background-color: #0d9ed2; */
+    /* width: 100%; */
+    background-color: #fff;
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 28px;
 }
 
 .student-dashboard-recommended-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0;
+    /* padding: 2px 26px; */
 }
 
 .student-dashboard-recommended-header h2 {
@@ -419,8 +438,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 1px solid #CCC3D4;
     background: transparent;
@@ -440,7 +459,7 @@
     border-radius: 18px;
     padding: 20px;
     border: 1px solid #ece8f7;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .05);
+    box-shadow: 0 -1px 0 2px rgba(0, 0, 0, .05);
     transition: .3s;
     /* background-color: #5d39cb; */
 }
@@ -466,11 +485,10 @@
 
 .student-dashboard-recommended-company-logo {
     border: 1px solid #ddd2ef;
-    border-radius: 12px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2px;
 }
 
 .student-dashboard-recommended-company-logo img {
@@ -500,13 +518,15 @@
 .student-dashboard-job-type {
     color: #3f3f3f;
     font-size: 12px;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
+    margin: 0;
 }
 
 .student-dashboard-skill-container {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+    margin-top: 10px;
 }
 
 .student-dashboard-skill-chip {
@@ -540,8 +560,8 @@
 }
 
 .student-dashboard-offer-logo {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 12px;
     border: 1px solid #d9d8ef;
     display: flex;
@@ -569,6 +589,7 @@
 
 .student-dashboard-offer-title p {
     /* margin-top: 6px; */
+    margin: 0;
     font-size: 12px;
     color: #6b7280;
 }
@@ -595,7 +616,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 34px;
-    row-gap: 10px;
+    row-gap: 15px;
     margin-bottom: 24px;
 }
 .student-dashboard-offer-item{
@@ -695,12 +716,12 @@
 .student-dashboard-status-body {
     display: flex;
     align-items: center;
-    gap: 100px;
+    justify-content: center;
 }
 
 .student-dashboard-chart {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     position: relative;
     flex-shrink: 0;
     margin: 15px;
@@ -736,12 +757,28 @@
 .student-dashboard-legend-item p {
     font-size: 14px;
     color: #30364D;
+    margin: 0;
 }
 
 .student-dashboard-task-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+}
+.Recommended-Jobs-Viewall-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #0d9ed2; */
+    padding: 10px;
+}
+.Recommended-Jobs-Viewall-btn button{
+    padding: 7px 12px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    background-color: #8658dd;
+    color: #fff;
 }
 
 .student-dashboard-task-header button {
@@ -778,10 +815,9 @@
 
 .student-dashboard-task-list{
     display: flex;
-    /* background-color: #0d9ed2; */
+    margin-top: 10px;
     flex-direction: column;
-    gap: 10px;
-    height: 100%;
+    gap: 15px;
     justify-content: center;
 }
 
@@ -821,6 +857,10 @@
     .student-dashboard-status-card h2,
     .student-dashboard-task-list-card h2 {
         font-size: 17px;
+        margin: 0;
+    }
+    .student-dashboard-recommended-header{
+        padding: 10px 0;
     }
 
     .student-dashboard-stats-container {
@@ -907,7 +947,6 @@
         padding: 4px 8px;
     }
 
-    /* Offer Cards Section */
     .student-dashboard-offer-container {
         gap: 14px;
         margin-top: 20px;
@@ -942,9 +981,7 @@
         font-size: 13px;
     }
 
-    /* Status & Chart Section */
     .student-dashboard-status-body {
-        gap: 30px; /* Reduced huge 100px gap */
         justify-content: space-around;
     }
 

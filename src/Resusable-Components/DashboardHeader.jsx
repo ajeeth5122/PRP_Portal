@@ -7,30 +7,30 @@ import Profile from "../assets/TCAssets/Trainerprof.png";
 
 const DashboardHeader = ({role,userName}) => {
   return (
-    <header className="po-header">
-      <div className="po-header-search">
-        <img src={Search} alt="Search Icon" className="po-header-search-icon" />
+    <header className="Dashboard-Header">
+      <div className="Dashboard-Header-search">
+        <img src={Search} alt="Search Icon" className="Dashboard-Header-search-icon" />
         <input type="text" placeholder="Search companies, drives..." />
       </div>
 
-      <div className="po-header-right">
-        <div className="po-header-icon-box" title="Notifications">
-          <img src={bellIcon} alt="Notifications" className="po-header-icon" />
+      <div className="Dashboard-Header-right">
+        <div className="Dashboard-Header-icon-box" title="Notifications">
+          <img src={bellIcon} alt="Notifications" className="Dashboard-Header-icon" />
         </div>
 
-        <div className="po-header-icon-box" title="Messages">
-          <img src={Messages} alt="Messages" className="po-header-icon" />
+        <div className="Dashboard-Header-icon-box" title="Messages">
+          <img src={Messages} alt="Messages" className="Dashboard-Header-icon" />
         </div>
 
-        <div className="po-header-profile">
+        <div className="Dashboard-Header-profile">
           <img
             src={Profile}
             alt="Priyanka Profile"
-            className="po-header-profile-img"
+            className="Dashboard-Header-profile-img"
           />
-          <div className="po-header-profile-info">
-            <h4 className="po-header-profile-name">{userName}</h4>
-            <p className="po-header-profile-role">{role}</p>
+          <div className="Dashboard-Header-profile-info">
+            <h4 className="Dashboard-Header-profile-name">{userName}</h4>
+            <p className="Dashboard-Header-profile-role">{role}</p>
           </div>
         </div>
       </div>

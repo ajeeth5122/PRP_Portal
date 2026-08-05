@@ -1,17 +1,21 @@
-.po-header {
-  width: 100%;
+.Dashboard-Header {
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  gap: 24px;  
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  gap: 30px;
 }
 
-.po-header-search {
+.Dashboard-Header-search {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   background-color: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08); 
+  /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);  */
+  border: 1px solid black;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -19,14 +23,14 @@
   box-sizing: border-box;
 }
 
-.po-header-search-icon {
+.Dashboard-Header-search-icon {
   width: 20px;
   height: 20px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.po-header-search input {
+.Dashboard-Header-search input {
   width: 100%;
   border: none;
   outline: none;
@@ -36,17 +40,17 @@
   background: transparent;
 }
 
-.po-header-search input::placeholder {
+.Dashboard-Header-search input::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
 
-.po-header-right {
+.Dashboard-Header-right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.po-header-icon-box {
+.Dashboard-Header-icon-box {
   position: relative;
   cursor: pointer;
   display: flex;
@@ -57,17 +61,16 @@
   transition: background-color 0.2s ease;
 }
 
-.po-header-icon-box:hover {
+.Dashboard-Header-icon-box:hover {
   background-color: #f5f5f5;
 }
 
-.po-header-icon {
+.Dashboard-Header-icon {
   width: 22px;
-  height: 22px;
   object-fit: contain;
 }
 
-.po-header-badge {
+.Dashboard-Header-badge {
   position: absolute;
   top: -2px;
   right: -2px;
@@ -85,7 +88,7 @@
   justify-content: center;
 }
 
-.po-header-profile {
+.Dashboard-Header-profile {
   display: flex;
   align-items: center;
   gap: 12px;  
@@ -95,33 +98,34 @@
   transition: background-color 0.2s ease;
 }
 
-.po-header-profile:hover {
+.Dashboard-Header-profile:hover {
   background-color: #f9f9f9;
 }
 
-.po-header-profile-img {
+.Dashboard-Header-profile-img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.po-header-profile-info {
+.Dashboard-Header-profile-info {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  flex: 1;
 }
 
-.po-header-profile-name {
+.Dashboard-Header-profile-name {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #111111;
   margin: 0;
   line-height: 1.2;
 }
 
-.po-header-profile-role {
+.Dashboard-Header-profile-role {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 400;

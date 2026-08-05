@@ -30,6 +30,7 @@ import assessment_icon from "../assets/StudentsAssets/assessment.png";
 import interview_icon from "../assets/StudentsAssets/interview.png";
 import workshop_icon from "../assets/StudentsAssets/workshop.png";
 import { useState } from "react";
+import DashboardHeader from "../Resusable-Components/DashboardHeader";
  
 const StudentDashboard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -134,7 +135,6 @@ const StudentDashboard = () => {
       stock: "0.05% Equity",
       expires: 2,
       img: job_icon,
-      icon: red_dot_icon,
       benefits: stock_options_icon,
     },
  
@@ -147,7 +147,6 @@ const StudentDashboard = () => {
       stock: "Full Coverage",
       expires: 6,
       img: job_icon2,
-      icon: black_dot_icon,
       benefits: benefits_icon,
     },
   ];
@@ -196,6 +195,7 @@ const StudentDashboard = () => {
  
   return (
     <div className="student-dashboard-main-container">
+      <DashboardHeader role={"Student"} userName={"Mahe"}/>
       <div className="student-dashboard-welcome-section">
         <h1 className="student-dashboard-heading">
           Welcome Back, <span>Alex</span>!
@@ -334,14 +334,16 @@ const StudentDashboard = () => {
                 </div>
               ))}
             </div>
+            <div className="Recommended-Jobs-Viewall-btn"><button>View All Jobs</button></div>
           </div>
         </div>
         <div className="student-dashboard-right-column">
           <div className="student-dashboard-upcoming-task-container">
             <div className="student-dashboard-upcoming-task-header">
               <h2>Upcoming Tasks</h2>
-              <img src={add_icon} alt="" className="" />
+              <img src={add_icon} alt="" className="student-dashboard-upcoming-AddIcon" />
             </div>
+            <div className="Std-Upcoming-TaskList">
             {upcomingTasks.map((task, index) => (
               <div className="student-dashboard-task-card" key={index}>
                 <div className="student-dashboard-task-left">
@@ -358,7 +360,10 @@ const StudentDashboard = () => {
                   <p className="student-dashboard-task-time">
                     <img src={task.icon} alt="duration" width={10} /> {task.time}
                   </p>
-                  {index === 0 ? (
+                  <p style={{margin:"0"}} className="student-dashboard-task-note">
+                      {task.note}
+                    </p>
+                  {/* {index === 0 ? (
                     <div className="student-dashboard-task-note">
                       {task.note}
                     </div>
@@ -366,10 +371,11 @@ const StudentDashboard = () => {
                     <small>
                       {task.note}
                     </small>
-                  )}
+                  )} */}
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </div>

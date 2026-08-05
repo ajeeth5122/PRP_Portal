@@ -40,7 +40,7 @@ const ReadinessChart = () => {
                         <span className="readiness-label">Total Students</span>
                     </div>
                 </div>
-
+                 <div>               
                 <ul className="readiness-legend">
                     {data.map((item) => (
                         <li key={item.name}>
@@ -57,6 +57,7 @@ const ReadinessChart = () => {
                         </li>
                     ))}
                 </ul>
+                </div>
             </div>
         </div>
     )
