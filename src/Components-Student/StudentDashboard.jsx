@@ -255,7 +255,7 @@ const StudentDashboard = () => {
           <div className="student-dashboard-application-container">
             <div className="student-dashboard-application-header">
               <h2>Application Status</h2>
-              <button>View All</button>
+              <button>View All Application</button>
             </div>
             {applications.map((application, index) => (
               <div

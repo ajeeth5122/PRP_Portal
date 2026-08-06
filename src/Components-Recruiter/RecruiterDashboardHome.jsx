@@ -24,10 +24,12 @@ import Minimize from '../assets/AdminAssets/Minimize.png'
 import Maximize from '../assets/AdminAssets/Maximize.png'
 import Footer from '../Components-LandingPage/Footer'
 import RecruiterDashboard from './RecruiterDashboard'
+import Modalbox from '../Resusable-Components/Modalbox'
 
 const RecruiterDashboardHome = () => {
     const [activetab,setActivetab]=useState('Dashboard');
     const [view,setView]=useState("Maximize")
+    const [showLogoutModal, setShowLogoutModal] = useState(false);
 
     const sidebar =[
         {title:"Dashboard" , icon:DashboardIC, Active :DashboardAct},
@@ -43,6 +45,19 @@ const RecruiterDashboardHome = () => {
         {title:"Logout" , icon:LogoutIC, Active :LogoutAct},
     ]
 
+    const handleTabClick = (title) => {
+        if (title === "Logout") {
+            setShowLogoutModal(true);
+        } else {
+            setActivetab(title);
+        }
+    };
+
+     const handleConfirmLogout = () => {
+        setShowLogoutModal(false);
+        navigate("/PRP_Portal")
+    }
+    
     return (
         <>
         <div className='AdminDashboard-Container'>
@@ -61,7 +76,7 @@ const RecruiterDashboardHome = () => {
                 <div className='AdminDashboard-Sidebar-List' >
                     {sidebar.map((list,index)=>
                     <div key={index}
-                    onClick={()=>setActivetab(list.title)}
+                    onClick={() => handleTabClick(list.title)}
                     className={activetab=== list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
                     
                     <img src={activetab===list.title? list.Active : list.icon} alt="AdminDashboard" width={24} />
@@ -79,7 +94,7 @@ const RecruiterDashboardHome = () => {
                 <div className='AdminDashboard-Sidebar-List' >
                     {sidebar.map((list,index)=>
                     <div key={index}
-                    onClick={()=>setActivetab(list.title)}
+                    onClick={() => handleTabClick(list.title)}
                     className={activetab=== list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
                     
                     <img src={activetab===list.title? list.Active : list.icon} alt="AdminDashboard" width={25} />
@@ -96,6 +111,15 @@ const RecruiterDashboardHome = () => {
                 )}
             </div>
         </div>
+        <Modalbox 
+                show={showLogoutModal}
+                isConfirm={true}
+                message="Are you sure you want to logout?"
+                confirmText="Logout"
+                cancelText="Cancel"
+                onClose={() => setShowLogoutModal(false)}
+                onConfirm={handleConfirmLogout}
+            />
         </>
     )
 }

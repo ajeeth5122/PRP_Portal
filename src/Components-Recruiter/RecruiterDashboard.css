@@ -1,8 +1,9 @@
 .Rec-Dashboard-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   gap: 20px;
+  width: 100%;
 }
  
 .Rec-Dashboard-header {
@@ -134,7 +135,7 @@
   border-radius: 8px;
   padding: 15px;
   /* max-width: 750px; */
-  width: 100%;
+  /* width: 100%; */
   /* background-color: #3b83f62f; */
 }
 .Rec-Dashboard-pipeline-card{
@@ -554,7 +555,7 @@
   margin-right: 10px;
 }
  
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .Rec-Dashboard-stats-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
@@ -604,7 +605,7 @@
   .Rec-Dashboard-table th,
   .Rec-Dashboard-table td {
     font-size: 12px;
-    /* padding: 16px 8px; */
+    padding: 16px 8px;
   }
  
   .Rec-Dashboard-btn-purple,
@@ -635,7 +636,7 @@
     font-size: 22px;
   }
  
-}
+} */
 
 
  
