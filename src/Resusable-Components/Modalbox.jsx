@@ -21,7 +21,7 @@ const Modalbox = ({ show, success, message, onClose, isConfirm = false, onConfir
                 </div>
                 )}
                 {isConfirm && (
-                <h3 className="modal-title">Confirmation</h3>
+                <h3 className="modal-title">Confirm</h3>
                 )}
                 
                 
@@ -37,7 +37,7 @@ const Modalbox = ({ show, success, message, onClose, isConfirm = false, onConfir
                             </button>
                         </>
                     ) : (
-                        <button className="modal-button" onClick={onClose} autoFocus>
+                        <button className="modal-button OK" onClick={onClose} autoFocus>
                             OK
                         </button>
                     )}

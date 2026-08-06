@@ -24,8 +24,10 @@ import Minimize from '../assets/AdminAssets/Minimize.png'
 import Maximize from '../assets/AdminAssets/Maximize.png'
 import StudentDashboard from './StudentDashboard'
 import Modalbox from '../Resusable-Components/Modalbox'
+import { useNavigate } from 'react-router-dom'
 
 const StudentDashboardHome = () => {
+    const navigate = useNavigate();
     const [activetab,setActivetab]=useState('Dashboard');
     const [view,setView]=useState("Maximize")
     const [showLogoutModal, setShowLogoutModal] = useState(false);

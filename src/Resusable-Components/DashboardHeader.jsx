@@ -14,6 +14,7 @@ const DashboardHeader = ({role,userName}) => {
       </div>
 
       <div className="Dashboard-Header-right">
+        <div style={{display:"flex",gap:"20px"}}>
         <div className="Dashboard-Header-icon-box" title="Notifications">
           <img src={bellIcon} alt="Notifications" className="Dashboard-Header-icon" />
         </div>
@@ -21,7 +22,7 @@ const DashboardHeader = ({role,userName}) => {
         <div className="Dashboard-Header-icon-box" title="Messages">
           <img src={Messages} alt="Messages" className="Dashboard-Header-icon" />
         </div>
-
+        </div>
         <div className="Dashboard-Header-profile">
           <img
             src={Profile}

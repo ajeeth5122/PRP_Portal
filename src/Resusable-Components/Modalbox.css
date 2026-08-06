@@ -60,8 +60,15 @@
   cursor: pointer;
   transition: background 0.2s ease;
 }
+.confirm-btn{
+  background-color: #0056b3;
+  
+}
+.confirm-btn:hover{
+ background-color: #dc3546d2;
+}
 
-.modal-button:hover {
+.OK:hover {
   background-color: #0056b3;
 }
 

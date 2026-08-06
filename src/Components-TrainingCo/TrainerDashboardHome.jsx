@@ -25,8 +25,10 @@ import Maximize from '../assets/AdminAssets/Maximize.png'
 import TrainerDashboard from './TrainerDashboard'
 import Footer from '../Components-LandingPage/Footer'
 import Modalbox from '../Resusable-Components/Modalbox'
+import { useNavigate } from 'react-router-dom'
 
 const TrainerDashboardHome = () => {
+    const navigate = useNavigate();
     const [activetab,setActivetab]=useState('Dashboard');
     const [view,setView]=useState("Maximize")
     const [showLogoutModal, setShowLogoutModal] = useState(false);
