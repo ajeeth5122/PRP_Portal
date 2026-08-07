@@ -100,6 +100,7 @@ const TrainerDashboardHome = () => {
                     {sidebar.map((list,index)=>
                     <div key={index}
                     onClick={() => handleTabClick(list.title)}
+                    title={list.title}
                     className={activetab=== list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
                     
                     <img src={activetab===list.title? list.Active : list.icon} alt="AdminDashboard" width={25} />

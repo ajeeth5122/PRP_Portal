@@ -66,8 +66,13 @@
 }
 
 .Dashboard-Header-icon {
-  width: 22px;
-  object-fit: contain;
+  width: 20px;
+  height: 22px;
+  /* object-fit: contain; */
+}
+.Dashboard-Header-icon-Chat{
+   width: 20px;
+  height: 20px;
 }
 
 .Dashboard-Header-badge {

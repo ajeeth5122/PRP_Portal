@@ -20,7 +20,7 @@ const DashboardHeader = ({role,userName}) => {
         </div>
 
         <div className="Dashboard-Header-icon-box" title="Messages">
-          <img src={Messages} alt="Messages" className="Dashboard-Header-icon" />
+          <img src={Messages} alt="Messages" className="Dashboard-Header-icon-Chat" />
         </div>
         </div>
         <div className="Dashboard-Header-profile">
