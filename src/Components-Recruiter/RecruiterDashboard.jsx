@@ -154,7 +154,6 @@ const interviews= [
 
     return (
         <div className="Rec-Dashboard-container">
-            <DashboardHeader role={'Recruiter'} userName={userName}/>
             <div className="Rec-Dashboard-header">
                 <h1 className="Rec-Dashboard-welcome-title">
                     Welcome back, <span className="Rec-Dashboard-highlight">{userName}</span>!

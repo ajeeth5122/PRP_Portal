@@ -1,0 +1,537 @@
+.RecruiterProfile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: #FFF; */
+}
+
+.Recriter-Profile-Form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: #ffffff;
+}
+
+.RecruiterProfile-banner {
+    background-color: #7042c4;
+    border-radius: 10px;
+    padding: 25px 20px;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.RecruiterProfile-banner-top {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.RecruiterProfile-user-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.RecruiterProfile-image-container {
+    position: relative;
+    display: flex;
+}
+
+.RecruiterProfile-profile-image {
+    display: block;
+    width: 150px;
+
+}
+
+.RecruiterProfile-camera-button {
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    border: 1px solid #6c6c6c95;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 50%;
+}
+.RecruiterProfile-camera-wrapper {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 10;
+}
+
+.RecruiterProfile-camera-button {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease-in-out;
+}
+
+.RecruiterProfile-camera-button:hover {
+  transform: scale(1.08);
+  background-color: #f8fafc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.RecruiterProfile-cam-dropdown {
+  position: absolute;
+  top: -10;
+  left:-20px;
+  background-color: #ffffff;
+  min-width: 150px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 20;
+  animation: dropdownFadeIn 0.2s ease-out forwards;
+}
+
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  background: transparent;
+  border: none;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.dropdown-item.remove-btn {
+  color: #ef4444;
+}
+
+.dropdown-item.remove-btn:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.RecruiterProfile-camera-icon {
+    width: 15px;
+}
+
+.RecruiterProfile-user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.RecruiterProfile-contact-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.RecruiterProfile-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 0px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.RecruiterProfile-contact-item p {
+    margin: 0;
+}
+
+.RecruiterProfile-contact-icon {
+    width: 15px;
+}
+
+.RecruiterProfile-edit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #cdb6f5;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.RecruiterProfile-edit-button:hover{
+    transform: scale(1.01 ,1.02);
+    box-shadow: -1px 0px 3px 1px #cdb6f5;
+}
+
+.RecruiterProfile-edit-icon {
+    width: 15px;
+    
+}
+
+.RecruiterProfile-summary {
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.RecruiterProfile-summary-icon-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.RecruiterProfile-summary-icon {
+    width: 20px;
+}
+
+.RecruiterProfile-summary-card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+.RecruiterProfile-Title-Card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.RecruiterProfile-UserName {
+    margin: 0;
+    font-size: 16px;
+}
+
+.RecruiterProfile-input-Wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.RecruiterProfile-Label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0B1C30;
+}
+
+.RecruiterProfile-Title-Card h4 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.RecruiterProfile-Title-Card p {
+    margin: 0;
+    font-size: 12px;
+    background-color: #a382e1;
+    padding: 3px 6px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: 5px;
+}
+
+.RecruiterProfile-summary-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.RecruiterProfile-summary-card p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.RecruiterProfile-summary-card span {
+    font-size: 12px;
+}
+
+.RecruiterProfile-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+
+
+.RecruiterProfile-card {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 100%;
+    padding: 20px 24px;
+    background-color: #ffffff;
+    border: 1px solid #e5dcf2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.RecruiterProfile-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.RecruiterProfile-card-header h2 {
+    margin: 0;
+    color: #152238;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.RecruiterProfile-card-icon {
+    /* padding: 2px; */
+    width: 21px;
+}
+
+.RecruiterProfile-card-icon1 {
+    width: 24px;
+    /* padding: 2px; */
+}
+
+.RecruiterProfile-personal-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.RecruiterProfile-personal-Row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.RecruiterProfile-input {
+    display: flex;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #383737;
+    width: 100%;
+    outline: none;
+    border: 1px solid #01000269;
+    box-sizing: border-box;
+}
+
+.display {
+    display: flex;
+    padding: 0;
+    padding: 10px 12px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid #85828743;
+    appearance: none;
+    color: #00000080;
+    
+}
+
+.RecruiterProfile-company-card {
+    height: 100%;
+}
+
+.RecruiterProfile-skills-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.RecruiterProfile-skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background-color: #eef3ff;
+    border-radius: 6px;
+    color: #7042c4;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.RecruiterProfile-Option-Buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.RecruiterProfile-SaveButton {
+    padding: 9px 12px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #7042c4;
+    color: #7042c4;
+    background-color: #fff;
+    font-weight: 600;
+
+}
+
+.RecruiterProfile-SaveButton:hover {
+    background-color: #7042c4;
+    color: #fff;
+}
+
+.RecruiterProfile-DiscardButton {
+    padding: 9px 12px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid rgb(214, 77, 77);
+    color: rgb(214, 77, 77);
+    background-color: #fff;
+    font-weight: 600;
+}
+
+.RecruiterProfile-DiscardButton:hover {
+    background-color: rgb(214, 77, 77);
+    color: #fff;
+}
+.RecruiterProfile-personal-Row2{
+    display: flex;
+    gap: 10px;
+}
+
+/* @media screen and (max-width: 1200px) {
+    .RecruiterProfile-summary {
+        gap: 15px;
+    }
+
+    .RecruiterProfile-contact-item {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .RecruiterProfile-summary-card span {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .RecruiterProfile-content {
+        grid-template-columns: 1fr;
+    }
+
+    .RecruiterProfile-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .RecruiterProfile-company-card {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .RecruiterProfile-banner {
+        padding: 15px;
+    }
+
+    .RecruiterProfile-banner-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .RecruiterProfile-user-section {
+        align-items: flex-start;
+    }
+
+    .RecruiterProfile-image-container {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        min-height: 90px;
+    }
+
+    .RecruiterProfile-profile-image {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        min-height: 90px;
+    }
+
+    .RecruiterProfile-contact-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .RecruiterProfile-contact-item {
+        padding: 5px 8px;
+    }
+
+    .RecruiterProfile-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .RecruiterProfile-personal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .RecruiterProfile-address-field {
+        grid-column: auto;
+    }
+
+    .RecruiterProfile-skills-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .RecruiterProfile-skills-grid {
+        grid-template-columns: 1fr;
+    }
+} */

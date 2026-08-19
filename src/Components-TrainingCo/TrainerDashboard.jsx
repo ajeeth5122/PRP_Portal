@@ -73,12 +73,11 @@ const TrainerDashboard = () => {
     { id: 5, title: 'Java', code: 'JD-04', percent: 72, completed: 321, total: 445, image: javaicon },
   ]
 
-  const userName = "Naveen Chand"
+  
   return (
     <>
       
       <div className='Tc-Dashboard-Container'>
-        <DashboardHeader role={"Training Coordinator"} userName={userName} />
         <div className="db-top-cards">
           {stats.map((item, index) => (
             <div key={index} className={`db-stat-card ${item.color}`}>

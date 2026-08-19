@@ -1,0 +1,484 @@
+.AdminProfile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+ 
+.AdminProfile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: #ffffff;
+}
+ 
+.AdminProfile-banner {
+    /* background-color: #a378f2; */
+    background: linear-gradient(45deg, #7042c4 70%,#9876d7 20%);
+    border-radius: 10px;
+    padding: 25px 20px;
+    color: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid #eef3ff;
+}
+ 
+.AdminProfile-banner-top {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+ 
+.AdminProfile-image-container {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+}
+ 
+.AdminProfile-profile-image {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* border: 4px solid #ffffff; */
+    box-sizing: border-box;
+}
+ 
+.AdminProfile-camera-button {
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    border: 4px solid #7042c4;
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+ 
+.AdminProfile-camera-icon {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+ 
+.AdminProfile-user-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+ 
+.AdminProfile-user-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+.AdminProfile-card-title-Wrap h2{
+    margin-top: 2px;
+}
+.AdminProfile-card-title-Wrap p{
+    margin  :0;
+    font-size: 12px;
+    color: #4d4d4d;
+}
+ 
+.AdminProfile-user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+.AdminProfile-title-card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+ 
+.AdminProfile-user-name {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+ 
+.AdminProfile-divider {
+    font-size: 18px;
+    opacity: 0.8;
+}
+ 
+.AdminProfile-designation {
+    margin: 0;
+    font-size: 12px;
+    background-color: #7c6a9e;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+}
+ 
+.AdminProfile-contact-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+ 
+.AdminProfile-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 0px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+ 
+.AdminProfile-contact-icon {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+ 
+.AdminProfile-edit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 15px;
+    background-color: #7042c4;
+    color: #ffffff;
+    border: 1px solid #cdb6f5;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+ 
+.AdminProfile-edit-button:hover {
+    transform: scale(1.01, 1.02);
+    box-shadow: -1px 0px 3px 1px #cdb6f5;
+}
+ 
+.AdminProfile-edit-icon {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+ 
+.AdminProfile-summary {
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+}
+ 
+.AdminProfile-summary-card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    /* background: rgba(143, 32, 228, 0.342);
+    backdrop-filter: blur(20px); */
+    background: #7c6a9ea7;
+    backdrop-filter: blur(30px);
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+ 
+.AdminProfile-summary-icon-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+ 
+.AdminProfile-summary-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+ 
+.AdminProfile-summary-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+ 
+.AdminProfile-summary-card p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+ 
+.AdminProfile-summary-card span {
+    font-size: 12px;
+}
+ 
+.AdminProfile-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+ 
+.AdminProfile-card {
+    width: 100%;
+    padding: 20px 24px;
+    background-color: #ffffff;
+    border: 1px solid #e5dcf2;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+ 
+.AdminProfile-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+ 
+.AdminProfile-card-header h2 {
+    margin: 0;
+    color: #152238;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+ 
+.AdminProfile-card-icon {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+ 
+.AdminProfile-personal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+ 
+.AdminProfile-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+ 
+.AdminProfile-input-wrapper label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #383737;
+}
+ 
+.AdminProfile-input {
+    display: flex;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #383737;
+    width: 100%;
+    outline: none;
+    border: 1px solid #85828793;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+ 
+.AdminProfile-input:disabled {
+    background-color: #ffffff;
+    color: #777777;
+    cursor: default;
+}
+ 
+.AdminProfile-input:focus {
+    border-color: #7042c4;
+}
+ 
+.AdminProfile-full-width {
+    grid-column: 1 / -1;
+}
+ 
+.AdminProfile-responsibilities-section {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #e5dcf2;
+    padding: 20px 24px;
+    border-radius: 10px;
+}
+ 
+.AdminProfile-responsibilities-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    /* padding: 0 20px ; */
+}
+ 
+.AdminProfile-responsibilities-header h2 {
+    margin: 0;
+    color: #152238;
+    font-size: 20px;
+    font-weight: 700;
+}
+ 
+.AdminProfile-responsibilities-icon {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+ 
+.AdminProfile-responsibilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+ 
+.AdminProfile-responsibility-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 58px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #eee7f7;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(112, 66, 196, 0.05);
+}
+ 
+.AdminProfile-responsibility-card:hover {
+    box-shadow: 0 3px 10px rgba(112, 66, 196, 0.12);
+    transform: translateY(-1px);
+}
+ 
+.AdminProfile-responsibility-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: #eef3ff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+ 
+.AdminProfile-responsibility-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+ 
+.AdminProfile-responsibility-card h4 {
+    margin: 0;
+    color: #152238;
+    font-size: 14px;
+    font-weight: 600;
+}
+ 
+.AdminProfile-responsibility-card p {
+    margin: 2px 0 0;
+    color: #777777;
+    font-size: 12px;
+}
+ 
+.AdminProfile-option-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+ 
+.AdminProfile-save-button {
+    padding: 9px 12px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #7042c4;
+    color: #7042c4;
+    background-color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+ 
+.AdminProfile-save-button:hover {
+    background-color: #7042c4;
+    color: #ffffff;
+}
+ 
+.AdminProfile-discard-button {
+    padding: 9px 12px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid rgb(214, 77, 77);
+    color: rgb(214, 77, 77);
+    background-color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+ 
+.AdminProfile-discard-button:hover {
+    background-color: rgb(214, 77, 77);
+    color: #ffffff;
+}
+ 
+@media (max-width: 1024px) {
+    .AdminProfile-banner {
+        padding: 20px 15px;
+    }
+ 
+    .AdminProfile-banner-top {
+        gap: 18px;
+    }
+ 
+    .AdminProfile-profile-image {
+        width: 125px;
+        height: 125px;
+    }
+ 
+    .AdminProfile-contact-details {
+        gap: 12px;
+    }
+ 
+    .AdminProfile-contact-item {
+        font-size: 12px;
+    }
+ 
+    .AdminProfile-summary {
+        gap: 10px;
+    }
+ 
+    .AdminProfile-summary-card {
+        padding: 8px;
+        gap: 6px;
+    }
+ 
+    .AdminProfile-summary-card p {
+        font-size: 12px;
+    }
+ 
+    .AdminProfile-summary-card span {
+        font-size: 10px;
+    }
+ 
+    .AdminProfile-responsibilities-grid {
+        gap: 12px;
+    }
+}
+ 

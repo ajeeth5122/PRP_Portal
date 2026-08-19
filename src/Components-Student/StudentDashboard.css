@@ -716,7 +716,8 @@
 .student-dashboard-status-body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    /* padding: 20px 10px; */
 }
 
 .student-dashboard-chart {
@@ -734,12 +735,14 @@
     transform: translate(-50%, -50%);
     font-size: 20px;
     font-weight: 600;
+
 }
 
 .student-dashboard-chart-legend {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 20px;
 }
 
 .student-dashboard-legend-item {

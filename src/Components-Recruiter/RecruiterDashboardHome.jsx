@@ -26,25 +26,33 @@ import Footer from '../Components-LandingPage/Footer'
 import RecruiterDashboard from './RecruiterDashboard'
 import Modalbox from '../Resusable-Components/Modalbox'
 import { useNavigate } from 'react-router-dom'
+import RecruiterProfile from './RecruiterProfile'
+import DashboardHeader from '../Resusable-Components/DashboardHeader'
+import { useData } from '../DataProvider'
 
 const RecruiterDashboardHome = () => {
-     const navigate = useNavigate();
-    const [activetab,setActivetab]=useState('Dashboard');
-    const [view,setView]=useState("Maximize")
+    const { user } = useData();
+
+    const UserId = 'HR-001'
+    const currentUser = user.Recruiter.find(r => r.id === UserId);
+
+    const navigate = useNavigate();
+    const [activetab, setActivetab] = useState('Dashboard');
+    const [view, setView] = useState("Maximize")
     const [showLogoutModal, setShowLogoutModal] = useState(false);
 
-    const sidebar =[
-        {title:"Dashboard" , icon:DashboardIC, Active :DashboardAct},
-        {title:"Company Profile" , icon:UsermanageIC, Active :UsermanageAct},
-        {title:"Applications" , icon:BatchesIC, Active :BatchesAct},
-        {title:"Job Postings" , icon:SessionsIC, Active :SessionsAct},
-        {title:"Offers" , icon:Profile, Active :ProfileAct},
-        {title:"Interviews" , icon:SupportIC, Active :SupportAct},
-        {title:"Reports & Analytics" , icon:ReportsIC, Active :ReportsAct},
-        {title:"Profile" , icon:Profile, Active :ProfileAct},
-        {title:"Settings" , icon:SettingsIC, Active :SettingsAct},
-        {title:"Support" , icon:SupportIC, Active :SupportAct},
-        {title:"Logout" , icon:LogoutIC, Active :LogoutAct},
+    const sidebar = [
+        { title: "Dashboard", icon: DashboardIC, Active: DashboardAct },
+        { title: "Company Profile", icon: UsermanageIC, Active: UsermanageAct },
+        { title: "Applications", icon: BatchesIC, Active: BatchesAct },
+        { title: "Job Postings", icon: SessionsIC, Active: SessionsAct },
+        { title: "Offers", icon: Profile, Active: ProfileAct },
+        { title: "Interviews", icon: SupportIC, Active: SupportAct },
+        { title: "Reports & Analytics", icon: ReportsIC, Active: ReportsAct },
+        { title: "Profile", icon: Profile, Active: ProfileAct },
+        { title: "Settings", icon: SettingsIC, Active: SettingsAct },
+        { title: "Support", icon: SupportIC, Active: SupportAct },
+        { title: "Logout", icon: LogoutIC, Active: LogoutAct },
     ]
 
     const handleTabClick = (title) => {
@@ -55,66 +63,70 @@ const RecruiterDashboardHome = () => {
         }
     };
 
-     const handleConfirmLogout = () => {
+    const handleConfirmLogout = () => {
         setShowLogoutModal(false);
         navigate("/PRP_Portal")
     }
-    
+
     return (
         <>
-        <div className='AdminDashboard-Container'>
-            {view==="Maximize" &&(
-            <div className='AdminDashboard-Sidebar'>
-                <div className='Adminsidebar-Title' >
-                    <div className='Adminside-Logo-Title'>
-                    <img src={ProductLogo} width={30} alt="" />
-                    <div className='UserRegistration-Title'>
-                        <h4>EDUHIRE</h4>
-                        {/* <p>EMPOWERING CAREERS, CONNECTING FUTURES</p> */}
+            <div className='AdminDashboard-Container'>
+                {view === "Maximize" && (
+                    <div className='AdminDashboard-Sidebar'>
+                        <div className='Adminsidebar-Title' >
+                            <div className='Adminside-Logo-Title'>
+                                <img src={ProductLogo} width={30} alt="" />
+                                <div className='UserRegistration-Title'>
+                                    <h4>EDUHIRE</h4>
+                                    {/* <p>EMPOWERING CAREERS, CONNECTING FUTURES</p> */}
+                                </div>
+                            </div>
+                            <img onClick={() => setView('Minimize')} src={Minimize} alt="Minimize" width={20} />
+                        </div>
+                        <div className='AdminDashboard-Sidebar-List' >
+                            {sidebar.map((list, index) =>
+                                <div key={index}
+                                    onClick={() => handleTabClick(list.title)}
+                                    className={activetab === list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
+
+                                    <img src={activetab === list.title ? list.Active : list.icon} alt="AdminDashboard" width={24} />
+                                    <p style={list.title === "Logout" ? { color: "red" } : {}} className='AdminDashboard-Sidebar-Item'>{list.title}</p>
+                                </div>
+                            )}
+                        </div>
                     </div>
-                    </div>
-                    <img onClick={()=>setView('Minimize')} src={Minimize} alt="Minimize" width={20} />
-                </div>
-                <div className='AdminDashboard-Sidebar-List' >
-                    {sidebar.map((list,index)=>
-                    <div key={index}
-                    onClick={() => handleTabClick(list.title)}
-                    className={activetab=== list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
-                    
-                    <img src={activetab===list.title? list.Active : list.icon} alt="AdminDashboard" width={24} />
-                    <p style={list.title === "Logout" ? { color: "red" } : {}} className='AdminDashboard-Sidebar-Item'>{list.title}</p>
-                    </div>
-                    )}
-                </div>
-            </div>
-            )}
-            {view==="Minimize" &&(
-            <div className='AdminDashboard-Sidebar Minimize'>
-                <div className='AdminDashboard-Maximize'>
-                    <img  onClick={()=>setView('Maximize')} src={Maximize} alt="Maximize" width={20} />
-                    </div>
-                <div className='AdminDashboard-Sidebar-List' >
-                    {sidebar.map((list,index)=>
-                    <div key={index}
-                    onClick={() => handleTabClick(list.title)}
-                    title={list.title}
-                    className={activetab=== list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
-                    
-                    <img src={activetab===list.title? list.Active : list.icon} alt="AdminDashboard" width={25} />
-                    {/* <p style={list.title === "Logout" ? { color: "red" } : {}} className='AdminDashboard-Sidebar-Item'>{list.title}</p> */}
-                    </div>
-                    )}
-                   
-                </div>
-            </div>
-            )}
-            <div className='AdminDashboard-Mainsec'>
-                {activetab==='Dashboard'&&(
-                    <RecruiterDashboard/>
                 )}
+                {view === "Minimize" && (
+                    <div className='AdminDashboard-Sidebar Minimize'>
+                        <div className='AdminDashboard-Maximize'>
+                            <img onClick={() => setView('Maximize')} src={Maximize} alt="Maximize" width={20} />
+                        </div>
+                        <div className='AdminDashboard-Sidebar-List' >
+                            {sidebar.map((list, index) =>
+                                <div key={index}
+                                    onClick={() => handleTabClick(list.title)}
+                                    title={list.title}
+                                    className={activetab === list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
+
+                                    <img src={activetab === list.title ? list.Active : list.icon} alt="AdminDashboard" width={25} />
+                                    {/* <p style={list.title === "Logout" ? { color: "red" } : {}} className='AdminDashboard-Sidebar-Item'>{list.title}</p> */}
+                                </div>
+                            )}
+
+                        </div>
+                    </div>
+                )}
+                <div className='AdminDashboard-Mainsec'>
+                    <DashboardHeader role={currentUser.designation}userName={currentUser.userName} />
+                    {activetab === 'Dashboard' && (
+                        <RecruiterDashboard currentUser={currentUser} />
+                    )}
+                    {activetab === 'Profile' && (
+                        <RecruiterProfile currentUser={currentUser} />
+                    )}
+                </div>
             </div>
-        </div>
-        <Modalbox 
+            <Modalbox
                 show={showLogoutModal}
                 isConfirm={true}
                 message="Are you sure you want to logout?"

@@ -97,7 +97,7 @@ const ForgotPassword = () => {
                                     <p>Enter your registered ID or email to receive a password reset link.</p>
                                 </div>
                                 {error.loginError && (
-                                    <div style={{ color: 'red', marginBottom: '15px', fontSize: '14px', textAlign: 'center' }}>
+                                    <div style={{marginBottom: '15px', fontSize: '14px', textAlign: 'center' }}>
                                         {error.loginError}
                                     </div>
                                 )}

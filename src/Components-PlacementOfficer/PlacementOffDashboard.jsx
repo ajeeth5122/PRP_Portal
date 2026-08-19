@@ -189,7 +189,6 @@ const PlacementOfficerDashboard = () => {
   const userName = "Joseph Durairaj"
   return (
     <div className="PO-Dashboard-container">
-      <DashboardHeader role="placement Officer" userName={userName} />
       <div className="PO-Dashboard-stats-grid">
         {stats.map((stat) => (
           <div className="PO-Dashboard-stat-card" key={stat.id} style={{ backgroundColor: stat.bg }}>

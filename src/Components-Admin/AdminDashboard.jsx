@@ -18,7 +18,6 @@ import Threedots from "../assets/AdminAssets/ThreeDots.png"
 import Profile from "../assets/TCAssets/Trainerprof.png";
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Bar, Cell } from "recharts"
 import "./AdminDashboard.css";
-import DashboardHeader from "../Resusable-Components/DashboardHeader"
 
 const AdminDashboard = () => {
     const placementData = [
@@ -31,7 +30,6 @@ const AdminDashboard = () => {
     ];
     return (
         <div className="admin-dashboard-main">
-            <DashboardHeader userName={"Super Admin"} role={"Admin"}/>
             <div className="admin-dashboard-stats">
                 <div className="admin-dashboard-stat-card">
                     <div className="admin-dashboard-stat-header">

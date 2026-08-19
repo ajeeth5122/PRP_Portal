@@ -195,7 +195,6 @@ const StudentDashboard = () => {
  
   return (
     <div className="student-dashboard-main-container">
-      <DashboardHeader role={"Student"} userName={"Mahe"}/>
       <div className="student-dashboard-welcome-section">
         <h1 className="student-dashboard-heading">
           Welcome Back, <span>Alex</span>!

@@ -20,6 +20,8 @@ import './AdminDashboardHome.css'
 import AdminDashboard from './AdminDashboard'
 import { useNavigate } from 'react-router-dom'
 import Modalbox from '../Resusable-Components/Modalbox'
+import AdminProfile from './AdminProfile'
+import DashboardHeader from '../Resusable-Components/DashboardHeader'
 
 const AdminDashboardHome = () => {
     const navigate = useNavigate();
@@ -97,11 +99,9 @@ const AdminDashboardHome = () => {
             </div>
             )}
             <div className='AdminDashboard-Mainsec'>
-                {activetab==="Dashboard" && (
-                    <>
-                    <AdminDashboard/>
-                    </>
-                )}
+                <DashboardHeader role={'Admin'} userName={"Sudhakar"}/>
+                {activetab==="Dashboard" && (<AdminDashboard/>)}
+                {activetab==="Profile" &&( <AdminProfile/> )}
             </div>
         </div>
         <Modalbox 

@@ -25,8 +25,16 @@ import Maximize from '../assets/AdminAssets/Maximize.png'
 import StudentDashboard from './StudentDashboard'
 import Modalbox from '../Resusable-Components/Modalbox'
 import { useNavigate } from 'react-router-dom'
+import DashboardHeader from '../Resusable-Components/DashboardHeader'
+import StudentProfile from './StudentProfile'
+import { useData } from '../DataProvider'
 
 const StudentDashboardHome = () => {
+    const { user} = useData();
+
+    const userId = 'STD-001'
+    const currentUser = user.Student.find(u => u.id === userId);
+
     const navigate = useNavigate();
     const [activetab,setActivetab]=useState('Dashboard');
     const [view,setView]=useState("Maximize")
@@ -108,8 +116,12 @@ const StudentDashboardHome = () => {
             </div>
             )}
             <div className='AdminDashboard-Mainsec'>
+                <DashboardHeader role={currentUser.designation} userName={currentUser.userName}/>
                 {activetab==='Dashboard' && (
-                    <StudentDashboard/>
+                    <StudentDashboard currentUser={currentUser}/>
+                )}  
+                {activetab==='Profile' && (
+                    <StudentProfile currentUser={currentUser}/>
                 )}     
                 
             </div>

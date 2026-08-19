@@ -26,27 +26,35 @@ import TrainerDashboard from './TrainerDashboard'
 import Footer from '../Components-LandingPage/Footer'
 import Modalbox from '../Resusable-Components/Modalbox'
 import { useNavigate } from 'react-router-dom'
+import TrainingCoordinatorProfile from './TrainingCoordinatorProfile'
+import DashboardHeader from '../Resusable-Components/DashboardHeader'
+import { useData } from '../DataProvider'
 
 const TrainerDashboardHome = () => {
+    const { user } = useData();
+
+    const UserId = 'TC-001'
+    const currentUser = user.TrainingCoordinator.find(tc => tc.id === UserId);
+
     const navigate = useNavigate();
-    const [activetab,setActivetab]=useState('Dashboard');
-    const [view,setView]=useState("Maximize")
+    const [activetab, setActivetab] = useState('Dashboard');
+    const [view, setView] = useState("Maximize")
     const [showLogoutModal, setShowLogoutModal] = useState(false);
 
 
-    const sidebar =[
-        {title:"Dashboard" , icon:DashboardIC, Active :DashboardAct},
-        {title:"Trainers" , icon:UsermanageIC, Active :UsermanageAct},
-        {title:"Batches" , icon:BatchesIC, Active :BatchesAct},
-        {title:"Sessions" , icon:SessionsIC, Active :SessionsAct},
-        {title:"Attendance" , icon:Profile, Active :ProfileAct},
-        {title:"Enrollments" , icon:SupportIC, Active :SupportAct},
-        {title:"Certificates" , icon:Certificates, Active :CertificatesAct},
-        {title:"Reports & Analytics" , icon:ReportsIC, Active :ReportsAct},
-        {title:"Profile" , icon:Profile, Active :ProfileAct},
-        {title:"Settings" , icon:SettingsIC, Active :SettingsAct},
-        {title:"Support" , icon:SupportIC, Active :SupportAct},
-        {title:"Logout" , icon:LogoutIC, Active :LogoutAct},
+    const sidebar = [
+        { title: "Dashboard", icon: DashboardIC, Active: DashboardAct },
+        { title: "Trainers", icon: UsermanageIC, Active: UsermanageAct },
+        { title: "Batches", icon: BatchesIC, Active: BatchesAct },
+        { title: "Sessions", icon: SessionsIC, Active: SessionsAct },
+        { title: "Attendance", icon: Profile, Active: ProfileAct },
+        { title: "Enrollments", icon: SupportIC, Active: SupportAct },
+        { title: "Certificates", icon: Certificates, Active: CertificatesAct },
+        { title: "Reports & Analytics", icon: ReportsIC, Active: ReportsAct },
+        { title: "Profile", icon: Profile, Active: ProfileAct },
+        { title: "Settings", icon: SettingsIC, Active: SettingsAct },
+        { title: "Support", icon: SupportIC, Active: SupportAct },
+        { title: "Logout", icon: LogoutIC, Active: LogoutAct },
     ]
 
     const handleTabClick = (title) => {
@@ -57,7 +65,7 @@ const TrainerDashboardHome = () => {
         }
     };
 
-      const handleConfirmLogout = () => {
+    const handleConfirmLogout = () => {
         setShowLogoutModal(false);
         navigate("/PRP_Portal")
     }
@@ -65,57 +73,59 @@ const TrainerDashboardHome = () => {
 
     return (
         <>
-        <div className='AdminDashboard-Container'>
-            {view==="Maximize" &&(
-            <div className='AdminDashboard-Sidebar'>
-                <div className='Adminsidebar-Title' >
-                    <div className='Adminside-Logo-Title'>
-                    <img src={ProductLogo} width={30} alt="" />
-                    <div className='UserRegistration-Title'>
-                        <h4>EDUHIRE</h4>
-                        {/* <p>EMPOWERING CAREERS, CONNECTING FUTURES</p> */}
+            <div className='AdminDashboard-Container'>
+                {view === "Maximize" && (
+                    <div className='AdminDashboard-Sidebar'>
+                        <div className='Adminsidebar-Title' >
+                            <div className='Adminside-Logo-Title'>
+                                <img src={ProductLogo} width={30} alt="" />
+                                <div className='UserRegistration-Title'>
+                                    <h4>EDUHIRE</h4>
+                                    {/* <p>EMPOWERING CAREERS, CONNECTING FUTURES</p> */}
+                                </div>
+                            </div>
+                            <img onClick={() => setView('Minimize')} src={Minimize} alt="Minimize" width={20} />
+                        </div>
+                        <div className='AdminDashboard-Sidebar-List' >
+                            {sidebar.map((list, index) =>
+                                <div key={index}
+                                    onClick={() => handleTabClick(list.title)}
+                                    className={activetab === list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
+
+                                    <img src={activetab === list.title ? list.Active : list.icon} alt="AdminDashboard" width={24} />
+                                    <p style={list.title === "Logout" ? { color: "red" } : {}} className='AdminDashboard-Sidebar-Item'>{list.title}</p>
+                                </div>
+                            )}
+                        </div>
                     </div>
+                )}
+                {view === "Minimize" && (
+                    <div className='AdminDashboard-Sidebar Minimize'>
+                        <div className='AdminDashboard-Maximize'>
+                            <img onClick={() => setView('Maximize')} src={Maximize} alt="Maximize" width={20} />
+                        </div>
+                        <div className='AdminDashboard-Sidebar-List' >
+                            {sidebar.map((list, index) =>
+                                <div key={index}
+                                    onClick={() => handleTabClick(list.title)}
+                                    title={list.title}
+                                    className={activetab === list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
+
+                                    <img src={activetab === list.title ? list.Active : list.icon} alt="AdminDashboard" width={25} />
+                                    {/* <p style={list.title === "Logout" ? { color: "red" } : {}} className='AdminDashboard-Sidebar-Item'>{list.title}</p> */}
+                                </div>
+                            )}
+
+                        </div>
                     </div>
-                    <img onClick={()=>setView('Minimize')} src={Minimize} alt="Minimize" width={20} />
-                </div>
-                <div className='AdminDashboard-Sidebar-List' >
-                    {sidebar.map((list,index)=>
-                    <div key={index}
-                    onClick={() => handleTabClick(list.title)}
-                    className={activetab=== list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
-                    
-                    <img src={activetab===list.title? list.Active : list.icon} alt="AdminDashboard" width={24} />
-                    <p style={list.title === "Logout" ? { color: "red" } : {}} className='AdminDashboard-Sidebar-Item'>{list.title}</p>
-                    </div>
-                    )}
+                )}
+                <div className='AdminDashboard-Mainsec'>
+                    <DashboardHeader role={currentUser.designation} userName={currentUser.userName} />
+                    {activetab === "Dashboard" && (<TrainerDashboard currentUser={currentUser} />)}
+                    {activetab === "Profile" && (<TrainingCoordinatorProfile currentUser={currentUser} />)}
                 </div>
             </div>
-            )}
-            {view==="Minimize" &&(
-            <div className='AdminDashboard-Sidebar Minimize'>
-                <div className='AdminDashboard-Maximize'>
-                    <img  onClick={()=>setView('Maximize')} src={Maximize} alt="Maximize" width={20} />
-                    </div>
-                <div className='AdminDashboard-Sidebar-List' >
-                    {sidebar.map((list,index)=>
-                    <div key={index}
-                    onClick={() => handleTabClick(list.title)}
-                    title={list.title}
-                    className={activetab=== list.title ? 'AdminDashboard-Sidebar-Item-cont-Active' : 'AdminDashboard-Sidebar-Item-cont'}>
-                    
-                    <img src={activetab===list.title? list.Active : list.icon} alt="AdminDashboard" width={25} />
-                    {/* <p style={list.title === "Logout" ? { color: "red" } : {}} className='AdminDashboard-Sidebar-Item'>{list.title}</p> */}
-                    </div>
-                    )}
-                   
-                </div>
-            </div>
-            )}
-            <div className='AdminDashboard-Mainsec'>
-                {activetab==="Dashboard" && (<TrainerDashboard/>)}               
-            </div>
-        </div>
-        <Modalbox 
+            <Modalbox
                 show={showLogoutModal}
                 isConfirm={true}
                 message="Are you sure you want to logout?"

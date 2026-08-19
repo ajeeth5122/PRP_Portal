@@ -9,10 +9,11 @@
   justify-content: center;
   padding: 80px 90px;
   gap: 20px;
-  background: 
+  background: #cda5e39f;
+  /* background: 
   radial-gradient(circle at 10% 10%, #cda5e3 0%, transparent 40%),
   radial-gradient(circle at 90% 80%, #F6EDFA 0%, transparent 50%),
-  linear-gradient(135deg, #FFFDFD 0%, #FAF6FB 50%, #FAF5FC 100%);
+  linear-gradient(135deg, #FFFDFD 0%, #FAF6FB 50%, #FAF5FC 100%); */
 }
 
 .LandingPage-main-content {
@@ -350,11 +351,13 @@ text-align: center;
 .LandingPage-datas h2{
   font-size:40px;
   font-weight:700;
+  margin: 0;
 }
 
 .LandingPage-datas p{
   margin-top:16px;
   font-size:16px;
+  margin :0
 }
 
 .LandingPage-datas span{

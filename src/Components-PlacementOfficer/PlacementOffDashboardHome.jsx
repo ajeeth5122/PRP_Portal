@@ -25,8 +25,15 @@ import Maximize from '../assets/AdminAssets/Maximize.png'
 import PlacementOfficerDashboard from './PlacementOffDashboard'
 import Modalbox from '../Resusable-Components/Modalbox'
 import { useNavigate } from 'react-router-dom'
+import PlacementOffProfile from './PlacementOfficerProfile'
+import { useData } from '../DataProvider'
+import DashboardHeader from '../Resusable-Components/DashboardHeader'
 
 const PlacementOffDashboardHome = () => {
+    const {user,setUser}=useData();
+    const UserId = 'PO-001'
+    const currentUser= user.PlacementOfficer.find(po=>po.id === UserId);
+
     const navigate = useNavigate();
     const [activetab,setActivetab]=useState('Dashboard');
     const [view,setView]=useState("Maximize")
@@ -34,13 +41,13 @@ const PlacementOffDashboardHome = () => {
 
     const sidebar =[
         {title:"Dashboard" , icon:DashboardIC, Active :DashboardAct},
+        {title:"Profile" , icon:Profile, Active :ProfileAct},
         {title:"Student Management" , icon:UsermanageIC, Active :UsermanageAct},
         {title:"Company Management" , icon:BatchesIC, Active :BatchesAct},
         {title:"Placement Drive" , icon:SessionsIC, Active :SessionsAct},
         {title:"Interview management" , icon:Profile, Active :ProfileAct},
         {title:"Applications" , icon:SupportIC, Active :SupportAct},
         {title:"Reports & Analytics" , icon:Certificates, Active :CertificatesAct},
-        {title:"Profile" , icon:Profile, Active :ProfileAct},
         {title:"Settings" , icon:SettingsIC, Active :SettingsAct},
         {title:"Support" , icon:SupportIC, Active :SupportAct},
         {title:"Logout" , icon:LogoutIC, Active :LogoutAct},
@@ -108,8 +115,12 @@ const PlacementOffDashboardHome = () => {
             </div>
             )}
             <div className='AdminDashboard-Mainsec'>
+                   <DashboardHeader role={currentUser.designation} userName={currentUser.userName} />
                 {activetab==='Dashboard' && (
-                   <PlacementOfficerDashboard/>
+                   <PlacementOfficerDashboard currentUser={currentUser}/>
+                )}
+                {activetab==='Profile' && (
+                   <PlacementOffProfile currentUser={currentUser}/>
                 )}
                 
                    
