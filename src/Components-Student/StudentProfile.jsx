@@ -74,7 +74,13 @@ const StudentProfile = ({currentUser}) => {
         else if (!regexOfMail.test(formData.email)) { newErrors.email = '*Enter a valid email address'; }
         if (!formData.phone.trim()) { newErrors.phone = '*Phone number is required'; }
         else if (!regexofMobile.test(formData.phone.trim())) { newErrors.phone = '*Enter a valid 10-digit phone number'; }
-
+        if (!formData.aboutme.trim()) {
+            newErrors.aboutme = '*field cannot be empty';
+        } else if (formData.aboutme.trim().length < 25) {
+            newErrors.aboutme = '*must be at least 25 characters';
+        } else if (formData.aboutme.trim().length > 250) {
+            newErrors.aboutme = '*must not exceed 250 characters';
+        }
 
         return newErrors;
     };

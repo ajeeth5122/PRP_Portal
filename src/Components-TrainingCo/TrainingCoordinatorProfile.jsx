@@ -164,7 +164,7 @@ const TrainingCoordinatorProfile = ({currentUser}) => {
                         </div>
 
                         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "15px", width: "100%" }}>
-                            <div className="RecruiterProfile-user-section">
+                            {/* <div className="RecruiterProfile-user-section">
 
                                 <div className='RecruiterProfile-Title-Card'>
                                     <h4 className='RecruiterProfile-UserName'>{currentUser.userName}</h4>|
@@ -197,7 +197,40 @@ const TrainingCoordinatorProfile = ({currentUser}) => {
                                 </div>
 
                                 <div className='TCProfile-Bio-cont'><p className='TCProfile-Bio'>"{currentUser.Bio}"</p> </div>
-                            </div>
+                            </div> */}
+                            <div className="RecruiterProfile-user-section">
+                                                            <div className="RecruiterProfile-user-details">
+                                                                <div className='RecruiterProfile-Title-Card'>
+                                                                    <h4 className='TCProfile-UserName'>{currentUser.userName}</h4>|
+                                                                    <p className='TCProfile-Title'> {currentUser.designation}</p>
+                                                                </div>
+                            
+                                                                <div className="TCProfile-contact-details">
+                                                                    <div className="TCProfile-contact-item">
+                                                                        <img src={EmailIcon} alt="MailIcon" className="RecruiterProfile-contact-icon" />
+                                                                        <span>{currentUser.email}</span>
+                                                                    </div>
+                                                                    <div className="TCProfile-contact-item">
+                                                                        <img src={PhoneIcon} alt="PhoneIcon" className="RecruiterProfile-contact-icon" />
+                                                                        <span>{currentUser.phone}</span>
+                                                                    </div>
+                                                                    <div className="TCProfile-contact-item">
+                                                                        <img src={LocationIcon} alt="LocationIcon" className="RecruiterProfile-contact-icon" />
+                                                                        <span>{currentUser.city}, {currentUser.state}</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                            
+                                                            {!isEditing && (
+                                                                <button type="button" className="AdminProfile-edit-button" onClick={handleEditClick}>
+                                                                    <img src={EditIcon} alt="edit" className="AdminProfile-edit-icon" />
+                                                                    Edit Profile
+                                                                </button>
+                                                            )}
+                                                            
+                                                        </div>
+                                                         <div className='StudentProfile-Bio'> <p className='StudentProfile-Bio'>"{formData.Bio}"</p> </div>
                         </div>
 
                     </div>

@@ -116,7 +116,6 @@ const PlacementOfficerProfile = ({ currentUser }) => {
         if (!formData.instituteAddress) { newErrors.instituteAddress = '*please enter Institute Address' }
         if (!formData.instituteState) { newErrors.instituteState = '*please enter Institute State' }
         if (!formData.instituteLocation) { newErrors.instituteLocation = '*please enter Institute Location' }
-        if (!formData.aboutme) { newErrors.aboutme = '*should not be in blank' }
         if (!formData.email.trim()) { newErrors.email = '*Email is required'; }
         else if (!regexOfMail.test(formData.email)) { newErrors.email = '*Enter a valid email address'; }
 
@@ -134,12 +133,12 @@ const PlacementOfficerProfile = ({ currentUser }) => {
         else if (formData.institutePincode && !regexofPincode.test(formData.institutePincode.trim())) {
             newErrors.institutePincode = '*Pincode must be 6 digits';
         }
-        if (!formData.aboutme || !formData.aboutme.trim()) {
-            newErrors.aboutme = '*About me field cannot be empty';
+        if (!formData.aboutme.trim()) {
+            newErrors.aboutme = '*field cannot be empty';
         } else if (formData.aboutme.trim().length < 25) {
-            newErrors.aboutme = '*About me must be at least 25 characters';
+            newErrors.aboutme = '*must be at least 25 characters';
         } else if (formData.aboutme.trim().length > 250) {
-            newErrors.aboutme = '*About me must not exceed 250 characters';
+            newErrors.aboutme = '*must not exceed 250 characters';
         }
 
         return newErrors;

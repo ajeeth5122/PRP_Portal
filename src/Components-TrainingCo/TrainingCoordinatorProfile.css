@@ -6,7 +6,7 @@
 }
 
 .TCProfile-Card-container{
-    background: linear-gradient(to bottom,#fff 50%,#8D61D7 50%);
+    background: linear-gradient(to bottom,#8D61D7 50%,#886abba6 50%);
     border-radius: 10px;
     padding: 25px 20px;
     box-sizing: border-box;
@@ -15,6 +15,10 @@
 .TCProfile-Bio-cont{
   display: flex;
 }
+.TCProfile-UserName,.TCProfile-Title{
+  color:#ffffffc7 ;
+}
+
 .TCProfile-Bio{
     font-size: 16px;
     font-weight: 600;
